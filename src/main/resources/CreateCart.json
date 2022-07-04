@@ -1,0 +1,571 @@
+{
+  "cartItem": [
+    {
+      "id": "1",
+      "quantity": 1,
+      "itemTotalPrice": [
+        {
+          "description": "Total Recurring Price",
+          "name": "Monthly Price",
+          "priceType": "recurring",
+          "recurringChargePeriod": "month",
+          "unitOfMeasure": "EUR",
+          "price": {
+            "percentage": 6,
+            "taxRate": 5,
+            "dutyFreeAmount": {
+              "unit": "EUR",
+              "value": 29
+            },
+            "taxIncludedAmount": {
+              "unit": "EUR",
+              "value": 31
+            },
+            "@baseType": "Cart Item",
+            "@schemaLocation": "Cart Item",
+            "@type": "Price"
+          },
+          "priceAlteration": [
+            {
+              "applicationDuration": 3,
+              "description": "First 3 month get 50% off",
+              "name": "WelcomeDiscount",
+              "priceType": "recurring",
+              "priority": 1,
+              "recurringChargePeriod": "month",
+              "unitOfMeasure": "EUR",
+              "price": {
+                "percentage": 50,
+                "taxRate": 10,
+                "dutyFreeAmount": {
+                  "unit": "29",
+                  "value": 0
+                },
+                "taxIncludedAmount": {
+                  "unit": "EUR",
+                  "value": 31
+                },
+                "@baseType": "CartItem",
+                "@schemaLocation": "PriceAlteration",
+                "@type": "PriceAlteration"
+              },
+              "productOfferingPrice": {
+                "id": "1111",
+                "href": "http://127.0.0.1:8003/api/shoppingCart/146/",
+                "name": "offer",
+                "@baseType": "CartItem",
+                "@schemaLocation": "productOfferingPrice",
+                "@type": "productOfferingPrice",
+                "@referredType": "productOfferingPrice"
+              },
+              "@baseType": "CartItem",
+              "@schemaLocation": "productPrice",
+              "@type": "productPrice"
+            }
+          ],
+          "productOfferingPrice": {
+            "id": "100",
+            "href": "http://127.0.0.1:8003/api/shoppingCart/146/",
+            "name": "Product Offer Price",
+            "@baseType": "CartItem",
+            "@schemaLocation": "productOfferingPrice",
+            "@type": "productOfferingPrice",
+            "@referredType": "productOfferingPrice"
+          },
+          "@baseType": "cartItem",
+          "@schemaLocation": "cartPrice",
+          "@type": "cartPrice"
+        }
+      ],
+      "action": "add",
+      "cartitem": "1000",
+      "cartItemRelationship": [
+        {
+          "id": "100",
+          "relationshipType": "cart addon",
+          "@baseType": "CartItem",
+          "@schemaLocation": "Cart Item Relation",
+          "@type": "ItemRelation"
+        }
+      ],
+      "itemPrice": [
+        {
+          "description": "Item Monthly Subscription Price",
+          "name": "Monthly Price",
+          "priceType": "Monthly",
+          "recurringChargePeriod": "month",
+          "unitOfMeasure": "EUR",
+          "price": {
+            "percentage": 6,
+            "taxRate": 6,
+            "dutyFreeAmount": {
+              "unit": "EUR",
+              "value": 29
+            },
+            "taxIncludedAmount": {
+              "unit": "EUR",
+              "value": 31
+            },
+            "@baseType": "CartItem",
+            "@schemaLocation": "Item Price",
+            "@type": "ItemPrice"
+          },
+          "priceAlteration": [
+            {
+              "applicationDuration": 6,
+              "description": "Discount",
+              "name": "discount",
+              "priceType": "Monthly",
+              "priority": 1,
+              "recurringChargePeriod": "month",
+              "unitOfMeasure": "EUR",
+              "price": {
+                "percentage": 50,
+                "taxRate": 10,
+                "dutyFreeAmount": {
+                  "unit": "EUR",
+                  "value": 29
+                },
+                "taxIncludedAmount": {
+                  "unit": "EUR",
+                  "value": 31
+                },
+                "@baseType": "CartItem",
+                "@schemaLocation": "PriceAlteration",
+                "@type": "PriceAlteration"
+              },
+              "productOfferingPrice": {
+                "id": "100",
+                "href": "http://127.0.0.1:8003/api/shoppingCart/146/",
+                "name": "offer price",
+                "@baseType": "ShoppingCart",
+                "@schemaLocation": "productOfferingPrice",
+                "@type": "productOfferingPrice",
+                "@referredType": "productOfferingPrice"
+              },
+              "@baseType": "PriceAlteration",
+              "@schemaLocation": "PriceAlteration",
+              "@type": "cartPrice"
+            }
+          ],
+          "productOfferingPrice": {
+            "id": "101",
+            "href": "http://127.0.0.1:8003/api/shoppingCart/146/",
+            "name": "offer price",
+            "@baseType": "PriceAlteration",
+            "@schemaLocation": "productOfferingPrice",
+            "@type": "productOfferingPrice",
+            "@referredType": "productOfferingPrice"
+          },
+          "@baseType": "PriceAlteration",
+          "@schemaLocation": "productOfferingPrice",
+          "@type": "productOfferingPrice"
+        }
+      ],
+      "itemTerm": [
+        {
+          "description": "string",
+          "name": "string",
+          "duration": {
+            "amount": 1,
+            "units": "string"
+          },
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string"
+        }
+      ],
+      "note": [
+        {
+          "id": "100",
+          "author": "Martin",
+          "date": "2022-08-04T04:27:16.600Z",
+          "text": "test Note",
+          "@baseType": "CartItem",
+          "@schemaLocation": "note",
+          "@type": "note"
+        }
+      ],
+      "product": {
+        "id": "18",
+        "href": "http://127.0.0.1:8003/api/shoppingCart/146/",
+        "description": "Sure Device",
+        "isBundle": true,
+        "isCustomerVisible": true,
+        "name": "Device",
+        "orderDate": "2022-07-28T04:27:16.600Z",
+        "productSerialNumber": "dsjhdlksahdlksja",
+        "startDate": "2022-07-28T04:27:16.600Z",
+        "terminationDate": "2022-07-28T04:27:16.600Z",
+        "agreement": [
+          {
+            "id": "102",
+            "href": "http://127.0.0.1:8003/api/shoppingCart/146/",
+            "agreementItemId": "AG-123",
+            "name": "sla-device",
+            "@baseType": "Product",
+            "@schemaLocation": "product",
+            "@type": "product",
+            "@referredType": "product"
+          }
+        ],
+        "billingAccount": {
+          "id": "104",
+          "href": "http://127.0.0.1:8003/api/shoppingCart/146/",
+          "name": "Account",
+          "@baseType": "CartItem",
+          "@schemaLocation": "Account",
+          "@type": "BillingAccount",
+          "@referredType": "BillingAccount"
+        },
+        "place": [
+          {
+            "id": "105",
+            "href": "http://127.0.0.1:8003/api/shoppingCart/146/",
+            "name": "Place 123",
+            "role": "User",
+            "@baseType": "Cart Item",
+            "@schemaLocation": "Cart Item",
+            "@type": "role",
+            "@referredType": "role"
+          }
+        ],
+        "product": [
+          "product-123"
+        ],
+        "productCharacteristic": [
+          {
+            "name": "charcterstic",
+            "valueType": "EUR",
+            "value": "123",
+            "@baseType": "Product",
+            "@schemaLocation": "Product",
+            "@type": "Product"
+          }
+        ],
+        "productOffering": {
+          "id": "120",
+          "href": "string",
+          "name": "string",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string",
+          "@referredType": "string"
+        },
+        "productOrderItem": [
+          {
+            "orderItemAction": "string",
+            "orderItemId": "string",
+            "productOrderHref": "string",
+            "productOrderId": "string",
+            "role": "string",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string",
+            "@referredType": "string"
+          }
+        ],
+        "productPrice": [
+          {
+            "description": "string",
+            "name": "string",
+            "priceType": "string",
+            "recurringChargePeriod": "string",
+            "unitOfMeasure": "string",
+            "billingAccount": {
+              "id": "107",
+              "href": "string",
+              "name": "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            "price": {
+              "percentage": 0,
+              "taxRate": 0,
+              "dutyFreeAmount": {
+                "unit": "string",
+                "value": 0
+              },
+              "taxIncludedAmount": {
+                "unit": "string",
+                "value": 0
+              },
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            "productOfferingPrice": {
+              "id": "121",
+              "href": "string",
+              "name": "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            "productPriceAlteration": [
+              {
+                "applicationDuration": 0,
+                "description": "string",
+                "name": "string",
+                "priceType": "string",
+                "priority": 0,
+                "recurringChargePeriod": "string",
+                "unitOfMeasure": "string",
+                "price": {
+                  "percentage": 0,
+                  "taxRate": 0,
+                  "dutyFreeAmount": {
+                    "unit": "string",
+                    "value": 0
+                  },
+                  "taxIncludedAmount": {
+                    "unit": "string",
+                    "value": 0
+                  },
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "productOfferingPrice": {
+                  "id": "122",
+                  "href": "string",
+                  "name": "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          }
+        ],
+        "productRelationship": [
+          {
+            "relationshipType": "string",
+            "product": "string",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          }
+        ],
+        "productSpecification": {
+          "id": "6",
+          "href": "string",
+          "name": "string",
+          "version": "string",
+          "targetProductSchema": {
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          },
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string",
+          "@referredType": "string"
+        },
+        "productTerm": [
+          {
+            "description": "string",
+            "name": "string",
+            "duration": {
+              "amount": 1,
+              "units": "string"
+            },
+            "validFor": {
+              "endDateTime": "2022-07-28T04:27:16.600Z",
+              "startDateTime": "2022-07-28T04:27:16.600Z"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          }
+        ],
+        "realizingResource": [
+          {
+            "id": "102",
+            "href": "string",
+            "name": "string",
+            "value": "string",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string",
+            "@referredType": "string"
+          }
+        ],
+        "realizingService": [
+          {
+            "id": "102",
+            "href": "string",
+            "name": "string",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string",
+            "@referredType": "string"
+          }
+        ],
+        "relatedParty": [
+          {
+            "id": "120",
+            "href": "http://127.0.0.1:8003/api/shoppingCart/146/",
+            "name": "Sandy Smith",
+            "role": "member",
+            "@baseType": "Product",
+            "@schemaLocation": "Product",
+            "@type": "relatedParty",
+            "@referredType": "Individual"
+          }
+        ],
+        "status": "active",
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string",
+        "@referredType": "cart"
+      },
+      "productOffering": {
+        "id": "125",
+        "href": "string",
+        "name": "string",
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string",
+        "@referredType": "string"
+      },
+      "status": "active",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "cartTotalPrice": [
+    {
+      "description": "Total Recurring Price",
+      "name": "Monthly Price",
+      "priceType": "recurring",
+      "recurringChargePeriod": "month",
+      "unitOfMeasure": "EUR",
+      "price": {
+        "percentage": 0,
+        "taxRate": 0,
+        "dutyFreeAmount": {
+          "unit": "EUR",
+          "value": 29
+        },
+        "taxIncludedAmount": {
+          "unit": "EUR",
+          "value": 31
+        },
+        "@baseType": "ShoppingCart",
+        "@schemaLocation": "cart Total Price",
+        "@type": "cartTotalPrice"
+      },
+      "priceAlteration": [
+        {
+          "applicationDuration": 0,
+          "description": "string",
+          "name": "string",
+          "priceType": "string",
+          "priority": 0,
+          "recurringChargePeriod": "string",
+          "unitOfMeasure": "string",
+          "price": {
+            "percentage": 0,
+            "taxRate": 0,
+            "dutyFreeAmount": {
+              "unit": "string",
+              "value": 0
+            },
+            "taxIncludedAmount": {
+              "unit": "string",
+              "value": 0
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          },
+          "productOfferingPrice": {
+            "id": "110",
+            "href": "string",
+            "name": "string",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string",
+            "@referredType": "string"
+          },
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string"
+        }
+      ],
+      "productOfferingPrice": {
+        "id": "111",
+        "href": "string",
+        "name": "string",
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string",
+        "@referredType": "string"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "contactMedium": [
+    {
+      "mediumType": "medium123",
+      "preferred": true,
+      "characteristic": {
+        "city": "Hyd",
+        "contactType": "string",
+        "country": "string",
+        "emailAddress": "string",
+        "faxNumber": "string",
+        "phoneNumber": "string",
+        "postCode": "string",
+        "socialNetworkId": "string",
+        "stateOrProvince": "string",
+        "street1": "string",
+        "street2": "string",
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string"
+      },
+      "validFor": {
+        "endDateTime": "2022-07-28T04:27:16.600Z",
+        "startDateTime": "2022-07-28T04:27:16.600Z"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "relatedParty": [
+    {
+      "id": "121",
+      "href": "http://127.0.0.1:8003/api/shoppingCart/141/",
+      "name": "Smith sandy",
+      "role": "member",
+      "@baseType": "ShoppingCart",
+      "@schemaLocation": "CartItem",
+      "@type": "CartItem",
+      "@referredType": "CartItem"
+    }
+  ],
+  "validFor": {
+    "endDateTime": "2022-08-04T04:27:16.600Z",
+    "startDateTime": "2022-08-04T04:27:16.600Z"
+  },
+  "@baseType": "ShoppingCart",
+  "@schemaLocation": "Shopping Cart",
+  "@type": "ShoppingCart",
+  "href": "http://127.0.0.1:8003/api/shoppingCart/146/"
+}

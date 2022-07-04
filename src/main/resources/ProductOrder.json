@@ -1,0 +1,717 @@
+{
+  "cancellationDate": "2019-05-02T08:13:59.506Z",
+  "cancellationReason": "string",
+  "category": "B2C product order",
+  "description": "Product Order illustration sample",
+  "externalId": "PO-456",
+  "notificationContact": "Sure",
+  "priority": "1",
+  "requestedCompletionDate": "2022-07-08T10:06:07.181598Z",
+  "requestedStartDate": "2022-07-08T10:06:07.181598Z",
+  "billing_account": {
+    "id": "200416",
+    "href": "https://host:port/billingAccountManagement/v4/billingAccount/1513",
+    "name": "billingaccount",
+    "@baseType": "airtek",
+    "@schemaLocation": "string",
+    "@type": "string",
+    "@referredType": "string"
+  },
+  "agreement": [
+    {
+      "id": "5",
+      "href": "string",
+      "name": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string",
+      "@referredType": "string"
+    },
+    {
+      "id": "56",
+      "href": "string",
+      "name": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string",
+      "@referredType": "string"
+    }
+  ],
+  "channel": [
+    {
+      "id": "11",
+      "href": "string",
+      "name": "string",
+      "role": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string",
+      "@referredType": "string"
+    },
+    {
+      "id": "21",
+      "href": "hello",
+      "name": "string",
+      "role": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string",
+      "@referredType": "string"
+    }
+  ],
+  "note": [
+    {
+      "id": "23",
+      "author": "string",
+      "date": "2022-06-29T10:33:12.499Z",
+      "text": "rdyhhy",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "payment": [
+    {
+      "id": "544",
+      "href": "string",
+      "name": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string",
+      "@referredType": "string"
+    }
+  ],
+  "productOfferingQualification": [
+    {
+      "id": "243",
+      "href": "string",
+      "name": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string",
+      "@referredType": "string"
+    }
+  ],
+  "quote": [
+    {
+      "id": "433",
+      "href": "string",
+      "name": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string",
+      "@referredType": "string"
+    }
+  ],
+  "orderTotalPrice": [
+    {
+      "description": "string",
+      "name": "string",
+      "priceType": "string",
+      "recurringChargePeriod": "string",
+      "unitOfMeasure": "string",
+      "billingAccount": {
+        "id": "34",
+        "href": "string",
+        "name": "string",
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string",
+        "@referredType": "string"
+      },
+      "price": {
+        "percentage": 0,
+        "taxrate": 0,
+        "dutyFreeAmount": {
+          "unit": "string",
+          "value": 0
+        },
+        "taxIncludedAmount": {
+          "unit": "string",
+          "value": 0
+        },
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string"
+      },
+      "priceAlteration": [
+        {
+          "applicationDuration": 0,
+          "description": "string",
+          "name": "string",
+          "priceType": "Added",
+          "priority": 0,
+          "recurringChargePeriod": "string",
+          "unitOfMeasure": "string",
+          "price": {
+            "percentage": 0,
+            "taxrate": 0,
+            "dutyFreeAmount": {
+              "unit": "string",
+              "value": 0
+            },
+            "taxIncludedAmount": {
+              "unit": "string",
+              "value": 0
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          },
+          "productOfferingPrice": {
+            "id": "1",
+            "href": "string",
+            "name": "string",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string",
+            "@referredType": "string"
+          },
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string"
+        }
+      ],
+      "productOfferingPrice": {
+        "id": "6522",
+        "href": "string",
+        "name": "string",
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string",
+        "@referredType": "string"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "relatedParty": [
+    {
+      "id": "34",
+      "href": "string",
+      "name": "string",
+      "role": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string",
+      "@referredType": "string"
+    }
+  ],
+  "productOrderItem": [
+    {
+      "id": 1,
+      "quantity": 12,
+      "action": "add",
+      "appointment": {
+        "id": "1",
+        "href": "string",
+        "description": "string",
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string",
+        "@referredType": "string"
+      },
+      "billingAccount": {
+        "id": "112",
+        "href": "paperscan.in",
+        "name": "paperscan",
+        "@baseType": "appsphere",
+        "@schemaLocation": "appsphere",
+        "@type": "appsphere",
+        "@referredType": "appsphere"
+      },
+      "itemPrice": [
+        {
+          "description": "string",
+          "name": "string",
+          "priceType": "string",
+          "recurringChargePeriod": "string",
+          "unitOfMeasure": "string",
+          "billingAccount": {
+            "id": "12",
+            "href": "string",
+            "name": "string",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string",
+            "@referredType": "string"
+          },
+          "price": {
+            "percentage": 0,
+            "taxrate": 0,
+            "dutyFreeAmount": {
+              "unit": "string",
+              "value": 0
+            },
+            "taxIncludedAmount": {
+              "unit": "string",
+              "value": 0
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          },
+          "priceAlteration": [
+            {
+              "applicationDuration": 0,
+              "description": "string",
+              "name": "string",
+              "priceType": "string",
+              "priority": 0,
+              "recurringChargePeriod": "string",
+              "unitOfMeasure": "string",
+              "price": {
+                "percentage": 0,
+                "taxrate": 0,
+                "dutyFreeAmount": {
+                  "unit": "string",
+                  "value": 0
+                },
+                "taxIncludedAmount": {
+                  "unit": "string",
+                  "value": 0
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              },
+              "productOfferingPrice": {
+                "id": "123",
+                "href": "string",
+                "name": "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              },
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            }
+          ],
+          "productOfferingPrice": {
+            "id": "187",
+            "href": "string",
+            "name": "string",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string",
+            "@referredType": "string"
+          },
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string"
+        }
+      ],
+      "itemTerm": [
+        {
+          "description": "string",
+          "name": "string",
+          "duration": {
+            "amount": 1,
+            "units": "string"
+          },
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string"
+        }
+      ],
+      "itemTotalPrice": [
+        {
+          "description": "string",
+          "name": "string",
+          "priceType": "string",
+          "recurringChargePeriod": "string",
+          "unitOfMeasure": "string",
+          "billingAccount": {
+            "id": "9",
+            "href": "string",
+            "name": "string",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string",
+            "@referredType": "string"
+          },
+          "price": {
+            "percentage": 0,
+            "taxrate": 0,
+            "dutyFreeAmount": {
+              "unit": "string",
+              "value": 0
+            },
+            "taxIncludedAmount": {
+              "unit": "string",
+              "value": 0
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          },
+          "priceAlteration": [
+            {
+              "applicationDuration": 0,
+              "description": "string",
+              "name": "string",
+              "priceType": "string",
+              "priority": 0,
+              "recurringChargePeriod": "string",
+              "unitOfMeasure": "string",
+              "price": {
+                "percentage": 0,
+                "taxrate": 0,
+                "dutyFreeAmount": {
+                  "unit": "string",
+                  "value": 0
+                },
+                "taxIncludedAmount": {
+                  "unit": "string",
+                  "value": 0
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              },
+              "productOfferingPrice": {
+                "id": "6",
+                "href": "string",
+                "name": "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              },
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            }
+          ],
+          "productOfferingPrice": {
+            "id": "5",
+            "href": "string",
+            "name": "string",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string",
+            "@referredType": "string"
+          },
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string"
+        }
+      ],
+      "payment": [
+        {
+          "id": "4",
+          "href": "string",
+          "name": "string",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string",
+          "@referredType": "string"
+        }
+      ],
+      "product": {
+        "id": "567",
+        "href": "string",
+        "description": "string",
+        "isBundle": true,
+        "isCustomerVisible": true,
+        "name": "string",
+        "orderDate": "2022-06-29T10:33:12.500Z",
+        "productSerialNumber": "string",
+        "startDate": "2022-06-29T10:33:12.500Z",
+        "terminationDate": "2022-06-29T10:33:12.500Z",
+        "agreement": [
+          {
+            "id": "87",
+            "href": "string",
+            "agreementItemId": "string",
+            "name": "string",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string",
+            "@referredType": "string"
+          }
+        ],
+        "billingAccount": {
+          "id": "45",
+          "href": "string",
+          "name": "string",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string",
+          "@referredType": "string"
+        },
+        "place": [
+          {
+            "id": "44",
+            "href": "string",
+            "name": "string",
+            "role": "string",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string",
+            "@referredType": "string"
+          }
+        ],
+        "productCharacteristic": [
+          {
+            "name": "string",
+            "valueType": "string",
+            "value": "string",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          }
+        ],
+        "productOffering": {
+          "id": "54",
+          "href": "string",
+          "name": "string",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string",
+          "@referredType": "string"
+        },
+        "productOrderItem": [
+          {
+            "orderItemAction": "string",
+            "orderItemId": "string",
+            "productOrderHref": "string",
+            "productOrderId": "string",
+            "role": "string",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string",
+            "@referredType": "string"
+          }
+        ],
+        "productPrice": [
+          {
+            "description": "string",
+            "name": "string",
+            "priceType": "string",
+            "recurringChargePeriod": "string",
+            "unitOfMeasure": "string",
+            "billingAccount": {
+              "id": "76",
+              "href": "string",
+              "name": "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            "price": {
+              "percentage": 0,
+              "taxrate": 0,
+              "dutyFreeAmount": {
+                "unit": "string",
+                "value": 0
+              },
+              "taxIncludedAmount": {
+                "unit": "string",
+                "value": 0
+              },
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            "productOfferingPrice": {
+              "id": "78",
+              "href": "string",
+              "name": "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            "productPriceAlteration": [
+              {
+                "applicationDuration": 0,
+                "description": "string",
+                "name": "string",
+                "priceType": "string",
+                "priority": 0,
+                "recurringChargePeriod": "string",
+                "unitOfMeasure": "string",
+                "price": {
+                  "percentage": 0,
+                  "taxrate": 0,
+                  "dutyFreeAmount": {
+                    "unit": "string",
+                    "value": 0
+                  },
+                  "taxIncludedAmount": {
+                    "unit": "string",
+                    "value": 0
+                  },
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "productOfferingPrice": {
+                  "id": "54654",
+                  "href": "string",
+                  "name": "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          }
+        ],
+        "productRelationship": [
+          {
+            "relationshipType": "string",
+            "product": "string",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          }
+        ],
+        "productSpecification": {
+          "id": "864",
+          "href": "string",
+          "name": "string",
+          "version": "string",
+          "targetProductSchema": {
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          },
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string",
+          "@referredType": "string"
+        },
+        "productTerm": [
+          {
+            "description": "string",
+            "name": "string",
+            "duration": {
+              "amount": 1,
+              "units": "string"
+            },
+            "validFor": {
+              "endDateTime": "2022-06-29T10:33:12.501Z",
+              "startDateTime": "2022-06-29T10:33:12.501Z"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          }
+        ],
+        "realizingResource": [
+          {
+            "id": "76",
+            "href": "string",
+            "name": "string",
+            "value": "string",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string",
+            "@referredType": "string"
+          }
+        ],
+        "realizingService": [
+          {
+            "id": "755",
+            "href": "string",
+            "name": "string",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string",
+            "@referredType": "string"
+          }
+        ],
+        "relatedParty": [
+          {
+            "id": "67",
+            "href": "string",
+            "name": "string",
+            "role": "string",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string",
+            "@referredType": "string"
+          }
+        ],
+        "status": "active",
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string",
+        "@referredType": "string"
+      },
+      "productOffering": {
+        "id": "98",
+        "href": "string",
+        "name": "string",
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string",
+        "@referredType": "string"
+      },
+      "productOfferingQualificationItem": {
+        "id": "76",
+        "href": "string",
+        "name": "string",
+        "productOfferingQualificationHref": "string",
+        "productOfferingQualificationId": "string",
+        "productOfferingQualificationName": "string",
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string",
+        "@referredType": "string"
+      },
+      "productOrderItemRelationship": [
+        {
+          "id": "446",
+          "relationshipType": "string",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string"
+        }
+      ],
+      "qualification": [
+        {
+          "id": "766",
+          "href": "string",
+          "name": "string",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string",
+          "@referredType": "string"
+        }
+      ],
+      "quoteItem": {
+        "id": "644",
+        "href": "string",
+        "name": "string",
+        "quoteHref": "string",
+        "quoteId": "string",
+        "quoteName": "string",
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string",
+        "@referredType": "string"
+      },
+      "state": "held",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "@baseType": "string",
+  "@schemaLocation": "string",
+  "@type": "string"
+}
