@@ -9,6 +9,7 @@ public class Properties {
     public static final String REPORT_LOCATION = "target/report/test-report.html";
 
     public static final String DB_URL = "jdbc:postgresql://127.0.0.1:5432/gurdeep"; // todo need to make this db the same for all services
+//    public static final String DB_URL = "jdbc:postgresql://127.0.0.1:5432/oms"; // todo need to make this db the same for all services
     public static final String DB_USER = "postgres";
     public static final String DB_PASS = "test";
 

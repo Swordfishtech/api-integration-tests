@@ -1,6 +1,6 @@
 package com.exos;
 
-import com.exos.services.cartManagement.*;
+import com.exos.dto.services.cart.*;
 
 public class CartManagementService {
 
@@ -26,7 +26,7 @@ public class CartManagementService {
 
     public GatewayRequest getCart(GetShoppingCart getCart) {
         gatewayRequest.setBody(getCart);
-        gatewayRequest.setResponseObjectType(null);
+        gatewayRequest.setResponseObjectType(GetShoppingCartResp.class);
         return gatewayRequest;
     }
 

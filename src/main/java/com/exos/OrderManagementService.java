@@ -1,9 +1,9 @@
 package com.exos;
 
-import com.exos.services.ordermanagement.CreateProductOrderReq;
-import com.exos.services.ordermanagement.GetProductOrderReq;
-import com.exos.services.ordermanagement.PatchProductOrderReq;
-import com.exos.services.ordermanagement.PatchProductOrderResp;
+import com.exos.dto.services.ordermanagement.CreateProductOrderReq;
+import com.exos.dto.services.ordermanagement.GetProductOrderReq;
+import com.exos.dto.services.ordermanagement.PatchProductOrderReq;
+import com.exos.dto.services.ordermanagement.PatchProductOrderResp;
 
 public class OrderManagementService {
 

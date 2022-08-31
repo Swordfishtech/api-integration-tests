@@ -2,10 +2,10 @@ package com.exos;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.exos.services.basket.AddBasketReq;
-import com.exos.services.basket.ModifyBasketReq;
-import com.exos.services.productsController.ProductImportReq;
-import com.exos.services.productsController.ProductImportResp;
+import com.exos.dto.services.basket.AddBasketReq;
+import com.exos.dto.services.basket.ModifyBasketReq;
+import com.exos.dto.services.productsController.ProductImportReq;
+import com.exos.dto.services.productsController.ProductImportResp;
 import com.google.gson.Gson;
 import com.mashape.unirest.http.HttpMethod;
 import com.mashape.unirest.http.HttpResponse;

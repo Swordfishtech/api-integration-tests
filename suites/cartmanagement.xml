@@ -1,0 +1,13 @@
+<!--<suite name="Cart Management Service" parallel="classes" thread-count="4">-->
+<suite name="Cart Management Service">
+<test name="Cart Management Service"   >
+        <packages>
+            <package name="com.exos.services.cartmanagement" />
+        </packages>
+    </test>
+    <groups>
+        <run>
+            <exclude name=".*-BUG" />
+        </run>
+    </groups>
+</suite>
