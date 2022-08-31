@@ -1,0 +1,1104 @@
+{
+  "accountNo": 0,
+  "accountSubGroupCd": "string",
+  "action": {
+    "acceptLinePlantResults": true,
+    "commit": true,
+    "commitSynchronously": true,
+    "remove": true,
+    "validate": true
+  },
+  "basketItems": [
+    {
+      "actionCharge": true,
+      "allowActionIgnoringPackage": true,
+      "basketConfig": [
+        {
+          "contractMandatory": true,
+          "includedInSale": true,
+          "inventoryTrackedItem": true,
+          "occurrence": [
+            {
+              "acceptedExistingNumber": true,
+              "apn": "string",
+              "autoTopupItems": [
+                {
+                  "balanceDefnUid": 0,
+                  "finalOperationCode": "string",
+                  "finalThresholdHadValue": true,
+                  "finalThresholdValue": 0,
+                  "firstOperationCode": "string",
+                  "firstThresholdHadValue": true,
+                  "firstThresholdValue": 0,
+                  "secondOperationCode": "string",
+                  "secondThresholdHadValue": true,
+                  "secondThresholdValue": 0,
+                  "tariffCode": "string",
+                  "tariffSx": "string",
+                  "tariffVer": 0,
+                  "topupPaymentMethodCd": "string"
+                }
+              ],
+              "bendAddress": {
+                "addressLine1": "string",
+                "addressLine2": "string",
+                "addressLookupKey": "string",
+                "addressProfileUid": 0,
+                "areaName": "string",
+                "countryName": "string",
+                "dpid": 0,
+                "entrance": "string",
+                "exchangeCode": "string",
+                "extension": "string",
+                "externalAddressUid": 0,
+                "flatNo": "string",
+                "informalAddress": "string",
+                "manuallyEditedYn": "string",
+                "networkNodeIds": [
+                  {
+                    "available": true,
+                    "networkNodeUid": 0,
+                    "nodeId": "string",
+                    "ownerDeptCd": "string"
+                  }
+                ],
+                "organizationName": "string",
+                "pcode": 0,
+                "placeName": "string",
+                "postCode": "string",
+                "streetName": "string",
+                "streetNo": "string",
+                "uid": 0
+              },
+              "broadbandConfig": {
+                "contactEmailAddress": "string",
+                "domainName": "string",
+                "dslUserNameSuffix": "string",
+                "password": "string",
+                "userName": "string"
+              },
+              "chosenRecommendedWoNo": 0,
+              "communityName": "string",
+              "contact": {
+                "contactAssociation": {
+                  "contactAssociationUid": 0,
+                  "locked": true,
+                  "primaryContact": true,
+                  "reasonCode": "string"
+                },
+                "contactDetail": {
+                  "accountGroupCd": "string",
+                  "accountSubGroupCd": "string",
+                  "birthDate": "2022-07-21T13:21:46.198Z",
+                  "companyName": "string",
+                  "contactUid": 0,
+                  "correspondenceAddress": {
+                    "addressLine1": "string",
+                    "addressLine2": "string",
+                    "addressLookupKey": "string",
+                    "addressProfileUid": 0,
+                    "areaName": "string",
+                    "countryName": "string",
+                    "dpid": 0,
+                    "entrance": "string",
+                    "exchangeCode": "string",
+                    "extension": "string",
+                    "externalAddressUid": 0,
+                    "flatNo": "string",
+                    "informalAddress": "string",
+                    "manuallyEditedYn": "string",
+                    "networkNodeIds": [
+                      {
+                        "available": true,
+                        "networkNodeUid": 0,
+                        "nodeId": "string",
+                        "ownerDeptCd": "string"
+                      }
+                    ],
+                    "organizationName": "string",
+                    "pcode": 0,
+                    "placeName": "string",
+                    "postCode": "string",
+                    "streetName": "string",
+                    "streetNo": "string",
+                    "uid": 0
+                  },
+                  "departmentName": "string",
+                  "dpConsentYn": {
+                    "booleanValue": true,
+                    "currencyValue": {
+                      "id": 0,
+                      "itemised": true,
+                      "value": 0
+                    },
+                    "dateValue": "2022-07-21T13:21:46.198Z",
+                    "doubleValue": 0,
+                    "intValue": 0,
+                    "stringValue": "string",
+                    "variantType": 0
+                  },
+                  "emailAddress1": "string",
+                  "emailAddress2": "string",
+                  "fileReferenceNo": "string",
+                  "genderCode": "string",
+                  "idNumber": "string",
+                  "information1": "string",
+                  "information2": "string",
+                  "isLocked": {
+                    "booleanValue": true,
+                    "currencyValue": {
+                      "id": 0,
+                      "itemised": true,
+                      "value": 0
+                    },
+                    "dateValue": "2022-07-21T13:21:46.198Z",
+                    "doubleValue": 0,
+                    "intValue": 0,
+                    "stringValue": "string",
+                    "variantType": 0
+                  },
+                  "maritalStatusCode": "string",
+                  "name": {
+                    "forenamesInitials": "string",
+                    "honours": "string",
+                    "middleName": "string",
+                    "surnameCompanyName": "string",
+                    "title": "string"
+                  },
+                  "officeName": "string",
+                  "password": "string",
+                  "personTypeCode": "string",
+                  "phoneNumbers": [
+                    {
+                      "phoneNumber": "string",
+                      "phoneTypeCd": "string"
+                    }
+                  ],
+                  "position": "string",
+                  "userDefinedFieldSet": {
+                    "userDefinedFields": [
+                      {
+                        "fieldName": "string",
+                        "fieldValue": {
+                          "booleanValue": true,
+                          "currencyValue": {
+                            "id": 0,
+                            "itemised": true,
+                            "value": 0
+                          },
+                          "dateValue": "2022-07-21T13:21:46.198Z",
+                          "doubleValue": 0,
+                          "intValue": 0,
+                          "stringValue": "string",
+                          "variantType": 0
+                        },
+                        "hidden": true
+                      }
+                    ]
+                  }
+                }
+              },
+              "contractUid": 0,
+              "creditProfileConfig": {
+                "barrable": {
+                  "booleanValue": true,
+                  "currencyValue": {
+                    "id": 0,
+                    "itemised": true,
+                    "value": 0
+                  },
+                  "dateValue": "2022-07-21T13:21:46.198Z",
+                  "doubleValue": 0,
+                  "intValue": 0,
+                  "stringValue": "string",
+                  "variantType": 0
+                },
+                "creditProfileCode": "string"
+              },
+              "defaultWorkTaskConfig": {
+                "quotaGroupForProvideSide": "string",
+                "quotaGroupForSimpleActionOrRecoverSide": "string",
+                "simpleActionOrSeparateOptions": true,
+                "workTasksForProvideSide": [
+                  {
+                    "points": 0,
+                    "seqNo": 0,
+                    "workTaskCharge": {
+                      "id": 0,
+                      "itemised": true,
+                      "value": 0
+                    },
+                    "workTaskCode": "string",
+                    "workTaskDescription": "string"
+                  }
+                ],
+                "workTasksForSimpleActionOrRecoverSide": [
+                  {
+                    "points": 0,
+                    "seqNo": 0,
+                    "workTaskCharge": {
+                      "id": 0,
+                      "itemised": true,
+                      "value": 0
+                    },
+                    "workTaskCode": "string",
+                    "workTaskDescription": "string"
+                  }
+                ]
+              },
+              "directoryEntry": {
+                "accessNo": "string",
+                "accountNo": 0,
+                "additionalText1": "string",
+                "additionalText2": "string",
+                "addressLine1": "string",
+                "areaName": "string",
+                "category": "string",
+                "deleted": true,
+                "detailsGenerated": true,
+                "directorySection": "string",
+                "displayName": "string",
+                "email": "string",
+                "exportStatusCd": "string",
+                "forename": "string",
+                "inclusionStatus": 0,
+                "knownAs": "string",
+                "placeName": "string",
+                "postCode": "string",
+                "profession": "string",
+                "qualifications": "string",
+                "seqNo": 0,
+                "sortKey": "string",
+                "staffUsername": "string",
+                "streetName": "string",
+                "surname": "string",
+                "title": "string",
+                "woNo": 0
+              },
+              "effectiveInstallationAddress": {
+                "addressLine1": "string",
+                "addressLine2": "string",
+                "addressLookupKey": "string",
+                "addressProfileUid": 0,
+                "areaName": "string",
+                "countryName": "string",
+                "dpid": 0,
+                "entrance": "string",
+                "exchangeCode": "string",
+                "extension": "string",
+                "externalAddressUid": 0,
+                "flatNo": "string",
+                "informalAddress": "string",
+                "manuallyEditedYn": "string",
+                "networkNodeIds": [
+                  {
+                    "available": true,
+                    "networkNodeUid": 0,
+                    "nodeId": "string",
+                    "ownerDeptCd": "string"
+                  }
+                ],
+                "organizationName": "string",
+                "pcode": 0,
+                "placeName": "string",
+                "postCode": "string",
+                "streetName": "string",
+                "streetNo": "string",
+                "uid": 0
+              },
+              "equipmentConfig": {
+                "agentCode": "string",
+                "referenceNo": "string"
+              },
+              "gsmConfig": {
+                "customerId": "string",
+                "handsetNo": "string",
+                "handsetTypeCode": "string",
+                "homeZone": "string",
+                "iccid": "string",
+                "mailboxNo": "string",
+                "password": "string"
+              },
+              "initialInstallDate": "2022-07-21T13:21:46.198Z",
+              "installationAddress": {
+                "addressLine1": "string",
+                "addressLine2": "string",
+                "addressLookupKey": "string",
+                "addressProfileUid": 0,
+                "areaName": "string",
+                "countryName": "string",
+                "dpid": 0,
+                "entrance": "string",
+                "exchangeCode": "string",
+                "extension": "string",
+                "externalAddressUid": 0,
+                "flatNo": "string",
+                "informalAddress": "string",
+                "manuallyEditedYn": "string",
+                "networkNodeIds": [
+                  {
+                    "available": true,
+                    "networkNodeUid": 0,
+                    "nodeId": "string",
+                    "ownerDeptCd": "string"
+                  }
+                ],
+                "organizationName": "string",
+                "pcode": 0,
+                "placeName": "string",
+                "postCode": "string",
+                "streetName": "string",
+                "streetNo": "string",
+                "uid": 0
+              },
+              "ipAddress": "string",
+              "itemisationConfig": {
+                "billSectionSettingsForNumber": {
+                  "accessNo": "string",
+                  "accountNo": 0,
+                  "billSectionSettings": [
+                    {
+                      "billSection": "string",
+                      "itemisationProductCharge": {
+                        "id": 0,
+                        "itemised": true,
+                        "value": 0
+                      },
+                      "itemisationProductCode": "string",
+                      "itemisationProductDescription": "string",
+                      "itemisationProductSuffix": "string",
+                      "itemisationProductSuffixDescription": "string",
+                      "option": "string"
+                    }
+                  ],
+                  "equipUid": 0,
+                  "productDescription": "string",
+                  "productType": "string"
+                },
+                "chargeForItemisation": true,
+                "itemisationDestInternational": true,
+                "itemisationDestLocal": true,
+                "itemisationDestNational": true,
+                "itemisationLevelCode": "string"
+              },
+              "leasedLineConfig": {
+                "bEndAddress": {
+                  "addressLine1": "string",
+                  "addressLine2": "string",
+                  "addressLookupKey": "string",
+                  "addressProfileUid": 0,
+                  "areaName": "string",
+                  "countryName": "string",
+                  "dpid": 0,
+                  "entrance": "string",
+                  "exchangeCode": "string",
+                  "extension": "string",
+                  "externalAddressUid": 0,
+                  "flatNo": "string",
+                  "informalAddress": "string",
+                  "manuallyEditedYn": "string",
+                  "networkNodeIds": [
+                    {
+                      "available": true,
+                      "networkNodeUid": 0,
+                      "nodeId": "string",
+                      "ownerDeptCd": "string"
+                    }
+                  ],
+                  "organizationName": "string",
+                  "pcode": 0,
+                  "placeName": "string",
+                  "postCode": "string",
+                  "streetName": "string",
+                  "streetNo": "string",
+                  "uid": 0
+                },
+                "circuitName": "string",
+                "contactName": "string",
+                "contactNo": "string",
+                "contractReference": "string",
+                "customerName": "string",
+                "functionCode": "string",
+                "lineLength": 0,
+                "serialNo": 0,
+                "signalling": "string",
+                "specification": "string"
+              },
+              "linePlantAdditionalService": true,
+              "linePlantIntegrationInfo": {
+                "capacityCheckErrorCode": "string",
+                "capacityCheckMessage": "string",
+                "capacityCheckResultCode": "string",
+                "carryOutCoverageCheck": true,
+                "carryOutLinePlantCapacityCheck": true,
+                "carryOutLinePlantReservation": true,
+                "confirmToTerminateAndReserve": true,
+                "reservationErrorCode": "string",
+                "reservationMessage": "string",
+                "reservationResultCode": "string",
+                "reservationStatusCode": "string",
+                "reservedAccessNo": "string",
+                "suggestedExchangeCode": "string",
+                "supportedDSLServiceTypes": [
+                  {
+                    "estimatedMaximumDownstreamSpeed": "string",
+                    "estimatedMaximumUpstreamSpeed": "string",
+                    "estimatedMinimumDownstreamSpeed": "string",
+                    "estimatedMinimumUpstreamSpeed": "string",
+                    "name": "string"
+                  }
+                ]
+              },
+              "linePlantIntegrationItem": true,
+              "linePlantIntegrationProduct": true,
+              "nominatedOldEquipUid": 0,
+              "notes": [
+                {
+                  "accountNo": 0,
+                  "lineDate": "2022-07-21T13:21:46.198Z",
+                  "lines": [
+                    "string"
+                  ],
+                  "noteType": "string",
+                  "user": "string"
+                }
+              ],
+              "occurrence": 0,
+              "oldProductEquipUid": 0,
+              "operatorLimitsConfig": {
+                "operatorLimitsDefinedForItem": [
+                  {
+                    "balCategory": "string",
+                    "balThresholdAmount": 0,
+                    "balanceKey": {
+                      "accountCd": "string",
+                      "accountLevelBal": true,
+                      "accountNo": 0,
+                      "balDefUid": 0,
+                      "balFunctionSetUid": 0,
+                      "balanceGroupCd": "string",
+                      "balanceLogicalId": 0,
+                      "communityOwnerEquipUid": 0,
+                      "communityUid": 0,
+                      "currencyCode": "string",
+                      "definitionName": "string",
+                      "equipUid": 0,
+                      "linepoolCd": "string",
+                      "permissionCd": "string",
+                      "shared": true,
+                      "statusCd": "string",
+                      "unitName": "string",
+                      "unitSystemCd": "string"
+                    },
+                    "finalThresholdAction": "string",
+                    "finalThresholdDefinedLimit": 0,
+                    "firstThresholdAction": "string",
+                    "firstThresholdDefinedLimit": 0,
+                    "hardThresholdNumber": 0,
+                    "isIncludedYn": true,
+                    "isOperatorLimitYn": "string",
+                    "limitAllowedYn": "string",
+                    "limitFirstUseAction": "string",
+                    "limitReachedAction": "string",
+                    "limitValue": 0,
+                    "maxFinalDefinedLimit": 0,
+                    "operatorDefaultFinalValueAction": "string",
+                    "operatorDefaultFirstThreshold": 0,
+                    "operatorDefaultSecondThreshold": 0,
+                    "operatorDefaultThreshold1Action": "string",
+                    "operatorDefaultThreshold2Action": "string",
+                    "prepaid": true,
+                    "secondThresholdAction": "string",
+                    "secondThresholdDefinedLimit": 0,
+                    "serviceLevelCd": "string",
+                    "serviceUid": 0,
+                    "spendingLimitAmount": 0,
+                    "timeBasedAutotopup": true
+                  }
+                ],
+                "operatorLimitsIncludedForItem": [
+                  {
+                    "balCategory": "string",
+                    "balThresholdAmount": 0,
+                    "balanceKey": {
+                      "accountCd": "string",
+                      "accountLevelBal": true,
+                      "accountNo": 0,
+                      "balDefUid": 0,
+                      "balFunctionSetUid": 0,
+                      "balanceGroupCd": "string",
+                      "balanceLogicalId": 0,
+                      "communityOwnerEquipUid": 0,
+                      "communityUid": 0,
+                      "currencyCode": "string",
+                      "definitionName": "string",
+                      "equipUid": 0,
+                      "linepoolCd": "string",
+                      "permissionCd": "string",
+                      "shared": true,
+                      "statusCd": "string",
+                      "unitName": "string",
+                      "unitSystemCd": "string"
+                    },
+                    "finalThresholdAction": "string",
+                    "finalThresholdDefinedLimit": 0,
+                    "firstThresholdAction": "string",
+                    "firstThresholdDefinedLimit": 0,
+                    "hardThresholdNumber": 0,
+                    "isIncludedYn": true,
+                    "isOperatorLimitYn": "string",
+                    "limitAllowedYn": "string",
+                    "limitFirstUseAction": "string",
+                    "limitReachedAction": "string",
+                    "limitValue": 0,
+                    "maxFinalDefinedLimit": 0,
+                    "operatorDefaultFinalValueAction": "string",
+                    "operatorDefaultFirstThreshold": 0,
+                    "operatorDefaultSecondThreshold": 0,
+                    "operatorDefaultThreshold1Action": "string",
+                    "operatorDefaultThreshold2Action": "string",
+                    "prepaid": true,
+                    "secondThresholdAction": "string",
+                    "secondThresholdDefinedLimit": 0,
+                    "serviceLevelCd": "string",
+                    "serviceUid": 0,
+                    "spendingLimitAmount": 0,
+                    "timeBasedAutotopup": true
+                  }
+                ]
+              },
+              "orderNoteLastUpdateDate": "2022-07-21T13:21:46.199Z",
+              "orderNoteLastUpdateUser": "string",
+              "originalAccessNo": "string",
+              "originalAccountNo": 0,
+              "originalExchangeCode": "string",
+              "originalInstallationAddress": {
+                "addressLine1": "string",
+                "addressLine2": "string",
+                "addressLookupKey": "string",
+                "addressProfileUid": 0,
+                "areaName": "string",
+                "countryName": "string",
+                "dpid": 0,
+                "entrance": "string",
+                "exchangeCode": "string",
+                "extension": "string",
+                "externalAddressUid": 0,
+                "flatNo": "string",
+                "informalAddress": "string",
+                "manuallyEditedYn": "string",
+                "networkNodeIds": [
+                  {
+                    "available": true,
+                    "networkNodeUid": 0,
+                    "nodeId": "string",
+                    "ownerDeptCd": "string"
+                  }
+                ],
+                "organizationName": "string",
+                "pcode": 0,
+                "placeName": "string",
+                "postCode": "string",
+                "streetName": "string",
+                "streetNo": "string",
+                "uid": 0
+              },
+              "pbxServiceConfig": {
+                "existingGroupAccessNo": "string",
+                "pbxGroupName": "string",
+                "pbxSuffix": 0
+              },
+              "requiresCoverageCheck": true,
+              "secondUserReferenceNumber": 0,
+              "serialNo": "string",
+              "serviceConfig": {
+                "accessNo": "string",
+                "agentCode": "string",
+                "costingEndDate": "2022-07-21T13:21:46.199Z",
+                "costingStartDate": "2022-07-21T13:21:46.199Z",
+                "customerId": "string",
+                "exchangeCode": "string",
+                "lineTypeCode": "string",
+                "numberType": "string",
+                "numberTypeCode": "string",
+                "portInDSL": "string",
+                "portingAction": "string",
+                "portingDonorOpCd": "string",
+                "portingEmailAddr": "string",
+                "portingOpCd": "string",
+                "portingPhoneNo": "string",
+                "portingRecipientOpCd": "string",
+                "portingStatus": "string"
+              },
+              "standardBalanceConfig": {
+                "standardBalanceDefinedForItem": [
+                  {
+                    "balCategory": "string",
+                    "balThresholdAmount": 0,
+                    "balanceKey": {
+                      "accountCd": "string",
+                      "accountLevelBal": true,
+                      "accountNo": 0,
+                      "balDefUid": 0,
+                      "balFunctionSetUid": 0,
+                      "balanceGroupCd": "string",
+                      "balanceLogicalId": 0,
+                      "communityOwnerEquipUid": 0,
+                      "communityUid": 0,
+                      "currencyCode": "string",
+                      "definitionName": "string",
+                      "equipUid": 0,
+                      "linepoolCd": "string",
+                      "permissionCd": "string",
+                      "shared": true,
+                      "statusCd": "string",
+                      "unitName": "string",
+                      "unitSystemCd": "string"
+                    },
+                    "finalThresholdAction": "string",
+                    "finalThresholdDefinedLimit": 0,
+                    "firstThresholdAction": "string",
+                    "firstThresholdDefinedLimit": 0,
+                    "hardThresholdNumber": 0,
+                    "isIncludedYn": true,
+                    "isOperatorLimitYn": "string",
+                    "limitAllowedYn": "string",
+                    "limitFirstUseAction": "string",
+                    "limitReachedAction": "string",
+                    "limitValue": 0,
+                    "maxFinalDefinedLimit": 0,
+                    "operatorDefaultFinalValueAction": "string",
+                    "operatorDefaultFirstThreshold": 0,
+                    "operatorDefaultSecondThreshold": 0,
+                    "operatorDefaultThreshold1Action": "string",
+                    "operatorDefaultThreshold2Action": "string",
+                    "prepaid": true,
+                    "secondThresholdAction": "string",
+                    "secondThresholdDefinedLimit": 0,
+                    "serviceLevelCd": "string",
+                    "serviceUid": 0,
+                    "spendingLimitAmount": 0,
+                    "timeBasedAutotopup": true
+                  }
+                ],
+                "standardBalanceIncludedForItem": [
+                  {
+                    "balCategory": "string",
+                    "balThresholdAmount": 0,
+                    "balanceKey": {
+                      "accountCd": "string",
+                      "accountLevelBal": true,
+                      "accountNo": 0,
+                      "balDefUid": 0,
+                      "balFunctionSetUid": 0,
+                      "balanceGroupCd": "string",
+                      "balanceLogicalId": 0,
+                      "communityOwnerEquipUid": 0,
+                      "communityUid": 0,
+                      "currencyCode": "string",
+                      "definitionName": "string",
+                      "equipUid": 0,
+                      "linepoolCd": "string",
+                      "permissionCd": "string",
+                      "shared": true,
+                      "statusCd": "string",
+                      "unitName": "string",
+                      "unitSystemCd": "string"
+                    },
+                    "finalThresholdAction": "string",
+                    "finalThresholdDefinedLimit": 0,
+                    "firstThresholdAction": "string",
+                    "firstThresholdDefinedLimit": 0,
+                    "hardThresholdNumber": 0,
+                    "isIncludedYn": true,
+                    "isOperatorLimitYn": "string",
+                    "limitAllowedYn": "string",
+                    "limitFirstUseAction": "string",
+                    "limitReachedAction": "string",
+                    "limitValue": 0,
+                    "maxFinalDefinedLimit": 0,
+                    "operatorDefaultFinalValueAction": "string",
+                    "operatorDefaultFirstThreshold": 0,
+                    "operatorDefaultSecondThreshold": 0,
+                    "operatorDefaultThreshold1Action": "string",
+                    "operatorDefaultThreshold2Action": "string",
+                    "prepaid": true,
+                    "secondThresholdAction": "string",
+                    "secondThresholdDefinedLimit": 0,
+                    "serviceLevelCd": "string",
+                    "serviceUid": 0,
+                    "spendingLimitAmount": 0,
+                    "timeBasedAutotopup": true
+                  }
+                ]
+              },
+              "suretyDepositConfig": {
+                "exclusionReason": "string",
+                "paidCharge": {
+                  "id": 0,
+                  "itemised": true,
+                  "value": 0
+                },
+                "refundDeposit": "string"
+              },
+              "topupPaymentMethodCd": "string",
+              "userDefinedFields": [
+                {
+                  "fieldName": "string",
+                  "fieldValue": {
+                    "booleanValue": true,
+                    "currencyValue": {
+                      "id": 0,
+                      "itemised": true,
+                      "value": 0
+                    },
+                    "dateValue": "2022-07-21T13:21:46.199Z",
+                    "doubleValue": 0,
+                    "intValue": 0,
+                    "stringValue": "string",
+                    "variantType": 0
+                  },
+                  "hidden": true
+                }
+              ],
+              "userDefinedLimitsIncludedForItem": [
+                {
+                  "balCategory": "string",
+                  "balThresholdAmount": 0,
+                  "balanceKey": {
+                    "accountCd": "string",
+                    "accountLevelBal": true,
+                    "accountNo": 0,
+                    "balDefUid": 0,
+                    "balFunctionSetUid": 0,
+                    "balanceGroupCd": "string",
+                    "balanceLogicalId": 0,
+                    "communityOwnerEquipUid": 0,
+                    "communityUid": 0,
+                    "currencyCode": "string",
+                    "definitionName": "string",
+                    "equipUid": 0,
+                    "linepoolCd": "string",
+                    "permissionCd": "string",
+                    "shared": true,
+                    "statusCd": "string",
+                    "unitName": "string",
+                    "unitSystemCd": "string"
+                  },
+                  "finalThresholdAction": "string",
+                  "finalThresholdDefinedLimit": 0,
+                  "firstThresholdAction": "string",
+                  "firstThresholdDefinedLimit": 0,
+                  "hardThresholdNumber": 0,
+                  "isIncludedYn": true,
+                  "isOperatorLimitYn": "string",
+                  "limitAllowedYn": "string",
+                  "limitFirstUseAction": "string",
+                  "limitReachedAction": "string",
+                  "limitValue": 0,
+                  "maxFinalDefinedLimit": 0,
+                  "operatorDefaultFinalValueAction": "string",
+                  "operatorDefaultFirstThreshold": 0,
+                  "operatorDefaultSecondThreshold": 0,
+                  "operatorDefaultThreshold1Action": "string",
+                  "operatorDefaultThreshold2Action": "string",
+                  "prepaid": true,
+                  "secondThresholdAction": "string",
+                  "secondThresholdDefinedLimit": 0,
+                  "serviceLevelCd": "string",
+                  "serviceUid": 0,
+                  "spendingLimitAmount": 0,
+                  "timeBasedAutotopup": true
+                }
+              ],
+              "workOrderProfileCode": "string",
+              "workOrderProvideDetails": {
+                "activationDate": "2022-07-21T13:21:46.199Z",
+                "contactEmail": "string",
+                "contactName": "string",
+                "contactPhoneNo": "string",
+                "groupReference": "string",
+                "preferredActionDate": "2022-07-21T13:21:46.199Z",
+                "purchaseOrderNo": "string",
+                "targetDate": "2022-07-21T13:21:46.199Z",
+                "tempProductTerminationDate": "2022-07-21T13:21:46.199Z",
+                "warrantyExpireDate": "2022-07-21T13:21:46.199Z"
+              },
+              "workOrderRecoverDetails": {
+                "activationDate": "2022-07-21T13:21:46.199Z",
+                "contactEmail": "string",
+                "contactName": "string",
+                "contactPhoneNo": "string",
+                "groupReference": "string",
+                "preferredActionDate": "2022-07-21T13:21:46.199Z",
+                "purchaseOrderNo": "string",
+                "targetDate": "2022-07-21T13:21:46.199Z",
+                "tempProductTerminationDate": "2022-07-21T13:21:46.199Z",
+                "warrantyExpireDate": "2022-07-21T13:21:46.199Z"
+              },
+              "workTaskConfig": {
+                "quotaGroupForProvideSide": "string",
+                "quotaGroupForSimpleActionOrRecoverSide": "string",
+                "simpleActionOrSeparateOptions": true,
+                "workTasksForProvideSide": [
+                  {
+                    "points": 0,
+                    "seqNo": 0,
+                    "workTaskCharge": {
+                      "id": 0,
+                      "itemised": true,
+                      "value": 0
+                    },
+                    "workTaskCode": "string",
+                    "workTaskDescription": "string"
+                  }
+                ],
+                "workTasksForSimpleActionOrRecoverSide": [
+                  {
+                    "points": 0,
+                    "seqNo": 0,
+                    "workTaskCharge": {
+                      "id": 0,
+                      "itemised": true,
+                      "value": 0
+                    },
+                    "workTaskCode": "string",
+                    "workTaskDescription": "string"
+                  }
+                ]
+              }
+            }
+          ],
+          "option": {
+            "compGroupCode": "string",
+            "tariffCode": "string"
+          },
+          "productInfoReadOnly": {
+            "communityTypeCode": "string",
+            "defaultApn": "string",
+            "fttp": true,
+            "line": true,
+            "numberPlanCode": "string",
+            "numberRangeTypeCode": "string",
+            "productTypeCode": "string",
+            "serviceCode": "string",
+            "staticIpProduct": true,
+            "tariffActionCode": "string"
+          },
+          "relations": [
+            {
+              "occurrence": 0,
+              "toAccessNo": "string",
+              "toBasketItemNo": 0,
+              "toBasketOptionNo": 0,
+              "toEquipEquipUid": 0,
+              "toExternalAccessNo": "string",
+              "toOccurrence": 0,
+              "toRelationship": {
+                "compGroupCode": "string",
+                "tariffCode": "string"
+              },
+              "toServiceCode": "string",
+              "toServiceEquipUid": 0
+            }
+          ],
+          "representsOldProduct": true,
+          "secondaryUsageProductIncluded": true,
+          "thirdUserReferenceNumber": 0
+        }
+      ],
+      "basketItemId": {
+        "barcode": "string",
+        "catalogueItemUid": 0,
+        "catalogueReference": "string",
+        "catalogueUid": 0,
+        "existingItemNo": 0,
+        "oldEquipUids": [
+          0
+        ],
+        "selectedInstallAddrUid": 0,
+        "serialNo": "string",
+        "tariffCode": "string"
+      },
+      "bulkCollectDataTypeItem": true,
+      "contractUid": 0,
+      "externalUid": 0,
+      "firstUserReferenceNumber": 0,
+      "loadOnlyMandOptions": true,
+      "method": "string",
+      "nodeId": "string",
+      "options": {
+        "excludeCharges": [
+          {
+            "chargeTypeCode": "string",
+            "compGroupCode": "string",
+            "salesAmendedPrice": {
+              "id": 0,
+              "itemised": true,
+              "value": 0
+            },
+            "tariffCode": "string",
+            "thirdPayment": [
+              {
+                "basketItemNo": 0,
+                "basketOptionNo": 0,
+                "occurrence": 0,
+                "thirdAccountNo": 0,
+                "thirdEndDate": "2022-07-21T13:21:46.199Z",
+                "thirdPaymentAmount": {
+                  "id": 0,
+                  "itemised": true,
+                  "value": 0
+                },
+                "thirdPaymentPercent": 0,
+                "thirdQuantity": 0,
+                "thirdStartDate": "2022-07-21T13:21:46.199Z",
+                "thirdStatusCode": "string"
+              }
+            ]
+          }
+        ],
+        "excludeTariffCodes": [
+          {
+            "compGroupCode": "string",
+            "tariffCode": "string"
+          }
+        ],
+        "includeCharges": [
+          {
+            "chargeTypeCode": "string",
+            "compGroupCode": "string",
+            "salesAmendedPrice": {
+              "id": 0,
+              "itemised": true,
+              "value": 0
+            },
+            "tariffCode": "string",
+            "thirdPayment": [
+              {
+                "basketItemNo": 0,
+                "basketOptionNo": 0,
+                "occurrence": 0,
+                "thirdAccountNo": 0,
+                "thirdEndDate": "2022-07-21T13:21:46.199Z",
+                "thirdPaymentAmount": {
+                  "id": 0,
+                  "itemised": true,
+                  "value": 0
+                },
+                "thirdPaymentPercent": 0,
+                "thirdQuantity": 0,
+                "thirdStartDate": "2022-07-21T13:21:46.199Z",
+                "thirdStatusCode": "string"
+              }
+            ]
+          }
+        ],
+        "includeTariffCodes": [
+          {
+            "compGroupCode": "string",
+            "tariffCode": "string"
+          }
+        ]
+      },
+      "ownerDeptCd": "string",
+      "package": true,
+      "packageConfig": [
+        {
+          "occurrence": 0,
+          "packageInfoReadOnly": {
+            "serviceCode": "string"
+          },
+          "representsOldProduct": true,
+          "workOrderProfileCode": "string"
+        }
+      ],
+      "packageHasOpenOrders": true,
+      "quantity": 0,
+      "recoveryReasonCode": "string",
+      "relatedToBasketItemNo": 0,
+      "remove": true,
+      "statusCode": "string",
+      "totalQuantity": 0
+    }
+  ],
+  "basketReferralInfo": {
+    "salesPartnerAccountNo": 0
+  },
+  "basketStatusCode": "string",
+  "basketUid": 0,
+  "bulkRecovery": true,
+  "defaultsProcessName": "string",
+  "estimation": true,
+  "finalBillYn": true,
+  "handle": "string",
+  "manuallyValidatedYn": true,
+  "newBillAddrUid": 0,
+  "numberRanges": [
+    {
+      "exchangeCd": "string",
+      "groupName": "string",
+      "highestDDINumber": "string",
+      "lineTypeCd": "string",
+      "lowestDDINumber": "string",
+      "numberRangeTypeCd": "string",
+      "rangeQuantity": 0,
+      "statusCode": "string"
+    }
+  ],
+  "participantName": {
+    "forenamesInitials": "string",
+    "honours": "string",
+    "middleName": "string",
+    "surnameCompanyName": "string",
+    "title": "string"
+  },
+  "postSaleForTempBasket": true,
+  "repatriation": true,
+  "rtmOrderUid": 0,
+  "salesChannel": "string",
+  "salesPartnerItem": {
+    "clientUid": 0,
+    "companyUid": 0,
+    "salesPersonId": "string"
+  },
+  "salesPerson": "string",
+  "salesPersonInternal": true,
+  "taskStepPassedYn": true,
+  "temporary": true,
+  "upfrontPaymentDetails": {
+    "bankAccountNo": 0,
+    "bankSortCode": "string",
+    "billingAgreementId": "string",
+    "cardNo": "string",
+    "cardType": "string",
+    "changeAmount": {
+      "id": 0,
+      "itemised": true,
+      "value": 0
+    },
+    "chequeNo": 0,
+    "customerName": "string",
+    "equipUid": 0,
+    "expiryDt": "2022-07-21T13:21:46.199Z",
+    "newCard": true,
+    "paymentDt": "2022-07-21T13:21:46.199Z",
+    "paymentMethodCd": "string",
+    "primeUid": 0,
+    "receiptNo": "string",
+    "saveNewCard": true,
+    "statusCd": "string",
+    "tenderedAmount": {
+      "id": 0,
+      "itemised": true,
+      "value": 0
+    },
+    "tenderedUsedAmount": {
+      "id": 0,
+      "itemised": true,
+      "value": 0
+    }
+  },
+  "workTaskListSetToDefault": true,
+  "wscOrderNumber": 0
+}
