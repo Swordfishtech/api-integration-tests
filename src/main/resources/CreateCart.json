@@ -164,7 +164,7 @@
       ],
       "itemTerm": [
         {
-          "description": "string",
+          "description": "I",
           "name": "string",
           "duration": {
             "amount": 1,
