@@ -13,7 +13,7 @@ import com.exos.dto.services.productsController.GetGroupProductsReq;
 import com.exos.dto.services.productsController.GetGroupProductsResp;
 import com.exos.dto.services.productsController.ProductImportReq;
 import com.exos.dto.services.productsController.ProductImportResp;
-import com.exos.dto.services.service.FindServiceByAccessNumberReq;
+import com.exos.dto.services.serviceController.FindServiceByAccessNumberReq;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.request.HttpRequest;
 import lombok.AccessLevel;
@@ -105,6 +105,14 @@ public class GatewayRequest {
 
     public CartManagementService cartManagement() {
        return new CartManagementService(this);
+    }
+
+    public SessionController sessionController() {
+       return new SessionController(this);
+    }
+
+    public ProductsController productsController() {
+       return new ProductsController(this);
     }
 
     public GatewayRequest send() {

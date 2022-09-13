@@ -4,10 +4,10 @@ import com.exos.BaseTest;
 import com.exos.GatewayRequest;
 import com.exos.Serializer;
 import com.exos.dto.services.ErrorMessage;
-import com.exos.dto.services.productsController.Attributes;
+import com.exos.dto.services.Attributes;
 import com.exos.dto.services.productsController.GetGroupProductsReq;
 import com.exos.dto.services.productsController.GetGroupProductsResp;
-import com.exos.dto.services.productsController.SessionRequest;
+import com.exos.dto.services.sessionController.SessionReq;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -137,7 +137,7 @@ public class TestGroupProducts extends BaseTest {
 
         ErrorMessage error = (ErrorMessage) new Serializer().serialize(response.getHttpResponse(), ErrorMessage.class);
         assertThat(error.getMessage(),is("Invalid Correlation Id"));
-        assertThat(error.getTrackingId(),is(request.getSessionRequest().correlationId));
+        assertThat(error.getTrackingId(),is(request.getSessionRequest().getCorrelationId()));
     }
 
     @Test
@@ -152,7 +152,7 @@ public class TestGroupProducts extends BaseTest {
 
         ErrorMessage error = (ErrorMessage) new Serializer().serialize(response.getHttpResponse(), ErrorMessage.class);
         assertThat(error.getMessage(),is("connection to session server failed"));
-        assertThat(error.getTrackingId(),is(request.getSessionRequest().correlationId));
+        assertThat(error.getTrackingId(),is(request.getSessionRequest().getCorrelationId()));
     }
 
 
@@ -162,7 +162,7 @@ public class TestGroupProducts extends BaseTest {
         request = GetGroupProductsReq.builder()
                 .compGroupCode("FIBREBB")
                 .packageCode("WSBBFI01")
-                .sessionRequest(SessionRequest
+                .sessionRequest(SessionReq
                         .builder()
                         .attributes(Attributes
                                 .builder()
