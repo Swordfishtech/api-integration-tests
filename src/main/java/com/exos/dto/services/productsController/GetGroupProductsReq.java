@@ -2,6 +2,7 @@ package com.exos.dto.services.productsController;
 
 import com.exos.AbstractHttpSpecification;
 import com.exos.Properties;
+import com.exos.dto.services.sessionController.SessionReq;
 import com.google.gson.annotations.SerializedName;
 import com.mashape.unirest.http.HttpMethod;
 import lombok.Builder;
@@ -20,7 +21,7 @@ public class GetGroupProductsReq extends AbstractHttpSpecification {
     @SerializedName("packageCode")
     private String packageCode;
     @SerializedName("sessionRequest")
-    private SessionRequest sessionRequest;
+    private SessionReq sessionRequest;
 
 
     @Override

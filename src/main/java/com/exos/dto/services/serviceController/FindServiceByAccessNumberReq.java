@@ -1,4 +1,4 @@
-package com.exos.dto.services.service;
+package com.exos.dto.services.serviceController;
 
 import com.exos.AbstractHttpSpecification;
 import com.mashape.unirest.http.HttpMethod;

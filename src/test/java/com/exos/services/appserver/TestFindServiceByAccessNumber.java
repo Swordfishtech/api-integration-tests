@@ -2,7 +2,7 @@ package com.exos.services.appserver;
 
 import com.exos.BaseTest;
 import com.exos.GatewayRequest;
-import com.exos.dto.services.service.FindServiceByAccessNumberReq;
+import com.exos.dto.services.serviceController.FindServiceByAccessNumberReq;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
