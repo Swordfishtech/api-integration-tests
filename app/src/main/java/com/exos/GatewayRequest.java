@@ -1,19 +1,18 @@
 package com.exos;
 
-import com.exos.dto.services.accessNumber.FindAccessNumbersForAllocationReq;
-import com.exos.dto.services.catalogue.GetCatalogueReq;
-import com.exos.dto.services.catalogue.GetCatalogueResp;
+import com.exos.controllers.*;
+import com.exos.dto.services.translation.accessno.FindAccessNumbersForAllocationReq;
+import com.exos.dto.services.translation.catalogue.GetCatalogueReq;
+import com.exos.dto.services.translation.catalogue.GetCatalogueResp;
 import com.exos.dto.services.login.LoginReq;
-import com.exos.dto.services.products.GetProductsReq;
-import com.exos.dto.services.products.GetProductsResp;
-import com.exos.dto.services.basket.AddBasketReq;
-import com.exos.dto.services.basket.FindBasketReq;
-import com.exos.dto.services.basket.ModifyBasketReq;
-import com.exos.dto.services.productsController.GetGroupProductsReq;
-import com.exos.dto.services.productsController.GetGroupProductsResp;
-import com.exos.dto.services.productsController.ProductImportReq;
-import com.exos.dto.services.productsController.ProductImportResp;
-import com.exos.dto.services.serviceController.FindServiceByAccessNumberReq;
+import com.exos.dto.services.translation.products.GetProductsReq;
+import com.exos.dto.services.translation.products.GetProductsResp;
+import com.exos.dto.services.translation.products.GetGroupProductsReq;
+import com.exos.dto.services.translation.products.GetGroupProductsResp;
+import com.exos.dto.services.translation.products.ProductImportReq;
+import com.exos.dto.services.translation.products.ProductImportResp;
+import com.exos.dto.services.translation.service.FindServiceByAccessNumberReq;
+import com.exos.dto.services.translation.basket.*;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.request.HttpRequest;
 import lombok.AccessLevel;
@@ -22,7 +21,7 @@ import lombok.Setter;
 
 public class GatewayRequest {
 
-    @Getter(AccessLevel.PROTECTED) private HttpHeader headers = new HttpHeader();
+    @Getter(AccessLevel.PUBLIC) private HttpHeader headers = new HttpHeader();
     @Setter @Getter(AccessLevel.PROTECTED) private AbstractHttpSpecification body;
     @Getter @Setter(AccessLevel.PROTECTED) private HttpRequest httpRequest;
     @Getter @Setter(AccessLevel.PROTECTED) private HttpResponse httpResponse;
@@ -69,6 +68,18 @@ public class GatewayRequest {
         return this;
     }
 
+    public GatewayRequest commitBasket(final CommitBasketReq commitBasket) {
+       body = commitBasket;
+       responseObjectType = CommitBasketResp.class;
+       return this;
+    }
+
+    public GatewayRequest getBasketSales(final BasketSalesReq basketSales) {
+       body = basketSales;
+       responseObjectType = BasketSalesResp.class;
+       return this;
+    }
+
     public GatewayRequest findServiceByAccessNumber(final FindServiceByAccessNumberReq findServiceByAccessNumberReq) {
        body = findServiceByAccessNumberReq;
        responseObjectType = null;
@@ -113,6 +124,14 @@ public class GatewayRequest {
 
     public ProductsController productsController() {
        return new ProductsController(this);
+    }
+
+    public CommunicationService communicationService() {
+       return new CommunicationService(this);
+    }
+
+    public BoosterOrchestrationService boosterOrchestrationService() {
+        return new BoosterOrchestrationService(this);
     }
 
     public GatewayRequest send() {

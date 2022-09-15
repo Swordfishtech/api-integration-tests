@@ -6,10 +6,10 @@ import lombok.Getter;
 @Getter
 public class ErrorMessage {
 
-    private String code;
+    private int code;
     private String reason;
     private String message;
-    private String status;
+    private int status;
     private String referenceError;
     @SerializedName("@baseType") private String baseType;
     @SerializedName("@schemaLocation") private String schemaLocation;

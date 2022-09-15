@@ -19,4 +19,8 @@ public class HttpHeader {
                 headers.put(key, value);
         }
 
+        public void removeHeader(String key) {
+                headers.remove(key);
+        }
+
 }

@@ -2,6 +2,7 @@ package com.exos.services.ordermanagement;
 
 import com.aventstack.extentreports.Status;
 import com.exos.*;
+import com.exos.dto.services.generic.ErrorMessage;
 import com.exos.dto.services.ordermanagement.CreateProductOrderReq;
 import com.exos.dto.services.ordermanagement.PatchProductOrderReq;
 import com.exos.dto.services.ordermanagement.PatchProductOrderResp;
@@ -11,6 +12,7 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.exos.helpers.AssertHelper.assertResponseBodyContains;
 import static com.exos.helpers.AssertHelper.assertResponseCode;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -64,7 +66,7 @@ public class TestUpdateProductOrder extends BaseTest {
         getTestReporter().log(Status.INFO, "Validated ProductOrderItem.state is set to rejected");
     }
 
-    @Test(groups = "BUG")
+    @Test()
     public void test_update_order_that_does_not_exist() {
 
         GatewayRequest gatewayRequest = new GatewayRequest()
@@ -73,8 +75,16 @@ public class TestUpdateProductOrder extends BaseTest {
                 .patchProductOrder(patchOrder.setProductId("1000"))
                 .send();
 
-        //todo this should return a 404 Not Found
         assertResponseCode(gatewayRequest, 404);
+
+        ErrorMessage error = (ErrorMessage) Serializer.serialize(gatewayRequest.getHttpResponse(), ErrorMessage.class);
+        assertResponseBodyContains("code", String.valueOf(error.getCode()), "404"); //todo shouldn't be a string
+        assertResponseBodyContains("reason", error.getReason(), "Product order not found");
+        assertResponseBodyContains("message", error.getMessage(), "Product order not found");
+        assertResponseBodyContains("status", String.valueOf(error.getCode()), "404"); //todo shouldn't be a string
+        assertResponseBodyContains("referenceError", error.getReferenceError(), "Unable to update the status for product order");
+
+
     }
 
     @Test(groups = "BUG")
@@ -92,7 +102,7 @@ public class TestUpdateProductOrder extends BaseTest {
         assertResponseCode(gatewayRequest, 400);
     }
 
-    @Test(groups = "BUG")
+    @Test()
     public void test_update_order_using_invalid_order_id() {
 
         GatewayRequest gatewayRequest = new GatewayRequest()
@@ -102,6 +112,14 @@ public class TestUpdateProductOrder extends BaseTest {
                 .send();
 
         assertResponseCode(gatewayRequest, 400);
+
+        ErrorMessage error = (ErrorMessage) Serializer.serialize(gatewayRequest.getHttpResponse(), ErrorMessage.class);
+        assertResponseBodyContains("code", String.valueOf(error.getCode()), "400"); //should not be a string
+        assertResponseBodyContains("reason", error.getReason(), "Error in updating product order");
+        assertResponseBodyContains("message", error.getMessage(), "Field 'id' expected a number but got 'a'.");
+        assertResponseBodyContains("status", String.valueOf(error.getCode()), "400"); //todo should not be a string
+        assertResponseBodyContains("referenceError", error.getReferenceError(), "Field 'id' expected a number but got 'a'.");
+
     }
 
     private void setupDatabase() {

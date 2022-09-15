@@ -3,6 +3,13 @@ package com.exos.helpers;
 import com.aventstack.extentreports.Status;
 import com.exos.BaseTest;
 import com.exos.GatewayRequest;
+<<<<<<< HEAD
+=======
+import com.exos.Serializer;
+import com.exos.dto.services.generic.ErrorMessage;
+import com.exos.dto.services.session.SessionReq;
+import com.mashape.unirest.http.HttpResponse;
+>>>>>>> 5ad3d1b (created dockerfile)
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -31,4 +38,34 @@ public class AssertHelper {
         BaseTest.getTestReporter().log(Status.PASS, String.format("Validated field [%s] is [%b]", fieldName, expectedValue));
     }
 
+<<<<<<< HEAD
+=======
+    public static void assertResponseBodyValueIsNotNull(String fieldName, int value) {
+        assertThat("Unexpected value in field " + fieldName,value,is(notNullValue()));
+        BaseTest.getTestReporter().log(Status.PASS, String.format("Validated field [%s] is not null", fieldName));
+    }
+
+    public static void assertResponseBodyValueIsNotEmptyString(String fieldName, String value) {
+        assertThat("Unexpected value in field " + fieldName, value,not(emptyOrNullString()));
+        BaseTest.getTestReporter().log(Status.PASS, String.format("Validated field [%s] is not empty or null", fieldName));
+    }
+
+    public static void assertMissingMandatoryHeadersErrorMessage(HttpResponse response) {
+
+        ErrorMessage errorMessage = (ErrorMessage) Serializer.serialize(response, ErrorMessage.class);
+
+        assertResponseBodyContains("Code",errorMessage.getCode(),400);
+        assertResponseBodyContains("Reason",errorMessage.getReason(),"Please provide all the necessary and required http headers");
+        assertResponseBodyContains("Message",errorMessage.getMessage(),"Required headers are missing, please verify and try again");
+        assertResponseBodyContains("Status",errorMessage.getStatus(),400);
+        assertResponseBodyContains("ReferenceError",errorMessage.getReferenceError(),"Please provide all the necessary and required http headers");
+    }
+
+    public static void assertSessionInfoLogLine(SessionReq session, String actualLog) {
+
+        String expectedLog = String.format("Session Info: {Login Name: %s, Full Name: %s, Email: %s, Correlation ID: %s, xCorrelation ID: %s}", session.getLoginName(), session.getFullName(), session.getEmail(), session.getCorrelationId(), session.getXCorrelationId());
+        assertResponseBodyContains("trackingId", actualLog, expectedLog);
+    }
+
+>>>>>>> 5ad3d1b (created dockerfile)
 }

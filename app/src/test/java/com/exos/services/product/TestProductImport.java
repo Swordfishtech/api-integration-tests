@@ -3,7 +3,7 @@ package com.exos.services.product;
 import com.exos.*;
 import com.exos.dto.services.ErrorMessage;
 import com.exos.dto.services.Attributes;
-import com.exos.dto.services.productsController.ProductImportReq;
+import com.exos.dto.services.translation.products.ProductImportReq;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 

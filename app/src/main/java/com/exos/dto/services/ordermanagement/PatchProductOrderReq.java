@@ -5,6 +5,7 @@ import com.exos.Properties;
 import com.google.gson.annotations.SerializedName;
 import com.mashape.unirest.http.HttpMethod;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
@@ -24,10 +25,10 @@ public class PatchProductOrderReq extends AbstractHttpSpecification {
     @Override
     protected String getEndpointUrl() {
         //todo this is a bug where the backslash is needed
-        return productId == null ? Properties.ORDER_MANAGEMENT_SERVER_HOSTNAME + "/api/product-order/" : Properties.ORDER_MANAGEMENT_SERVER_HOSTNAME + "/api/product-order/" + productId + "/";
+        return productId == null ? Properties.ORDER_MANAGEMENT_SERVICE_SERVER_HOSTNAME + "/api/product-order/" : Properties.ORDER_MANAGEMENT_SERVICE_SERVER_HOSTNAME + "/api/product-order/" + productId + "/";
     }
 
-    @Setter private List<ProductOrderItem> productOrderItem;
+    @Getter @Setter private List<ProductOrderItem> productOrderItem;
     @Setter private String state;
     @Setter @SerializedName("@baseType") public String baseType;
     @Setter @SerializedName("@schemaLocation") public String schemaLocation;
@@ -35,6 +36,7 @@ public class PatchProductOrderReq extends AbstractHttpSpecification {
 
     @Builder
     @Accessors(chain = true)
+    @Getter
     public static class ProductOrderItem {
 
         @Setter private String id;
