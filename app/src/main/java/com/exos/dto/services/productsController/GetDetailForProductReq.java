@@ -5,7 +5,6 @@ import com.exos.Properties;
 import com.exos.dto.services.Session;
 import com.mashape.unirest.http.HttpMethod;
 import lombok.Builder;
-import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 

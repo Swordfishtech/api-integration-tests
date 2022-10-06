@@ -1,7 +1,6 @@
 package com.exos;
 
 import com.aventstack.extentreports.Status;
-import com.exos.Properties;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

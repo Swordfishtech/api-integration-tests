@@ -3,7 +3,6 @@ package com.exos.helpers;
 import com.aventstack.extentreports.Status;
 import com.exos.BaseTest;
 import com.exos.GatewayRequest;
-import com.mashape.unirest.http.HttpResponse;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;

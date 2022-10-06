@@ -2,8 +2,6 @@ package com.exos;
 
 import com.exos.dto.services.productsController.GetDetailForProductReq;
 import com.exos.dto.services.productsController.GetDetailForProductResp;
-import com.exos.dto.services.sessionController.SessionReq;
-import com.exos.dto.services.sessionController.SessionResp;
 
 public class ProductsController {
 
