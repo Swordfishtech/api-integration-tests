@@ -2,10 +2,10 @@ package com.exos;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.exos.dto.services.basket.AddBasketReq;
-import com.exos.dto.services.basket.ModifyBasketReq;
-import com.exos.dto.services.productsController.ProductImportReq;
-import com.exos.dto.services.productsController.ProductImportResp;
+import com.exos.dto.services.translation.basket.AddBasketReq;
+import com.exos.dto.services.translation.basket.ModifyBasketReq;
+import com.exos.dto.services.translation.products.ProductImportReq;
+import com.exos.dto.services.translation.products.ProductImportResp;
 import com.google.gson.Gson;
 import com.mashape.unirest.http.HttpMethod;
 import com.mashape.unirest.http.HttpResponse;
@@ -56,16 +56,12 @@ public class HttpDispatcher {
                 try {
                     productImportResp.setMessage(response.getBody().toString());
                     gatewayRequest.setSerializedResponse(productImportResp);
-                }catch (Exception e) {
+                } catch (Exception e) {
                     //todo this is when we get back an Error - once response is in JSON we can get rid of this
                 }
                 gatewayRequest.setHttpResponse(response);
-//            } else if(gatewayRequest.getBody().getHttpMethod() == HttpMethod.GET) {
-//                // don't pass in a request body
-//                response = request.asJson();
-//                gatewayRequest.setHttpResponse(response);
             }
-            else {
+           else {
                 response = ((HttpRequestWithBody) request).body(jsonBody).asJson();
                 gatewayRequest.setHttpResponse(response);
 
@@ -74,6 +70,7 @@ public class HttpDispatcher {
                     gatewayRequest.setSerializedResponse(new Gson().fromJson(response.getBody().toString(), gatewayRequest.getResponseObjectType()));
                 }
             }
+
 
 
         } catch (UnirestException e) {

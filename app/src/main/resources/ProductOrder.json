@@ -19,16 +19,7 @@
   },
   "agreement": [
     {
-      "id": "5",
-      "href": "string",
-      "name": "string",
-      "@baseType": "string",
-      "@schemaLocation": "string",
-      "@type": "string",
-      "@referredType": "string"
-    },
-    {
-      "id": "56",
+      "id": "14",
       "href": "string",
       "name": "string",
       "@baseType": "string",
@@ -39,18 +30,8 @@
   ],
   "channel": [
     {
-      "id": "11",
+      "id": "13",
       "href": "string",
-      "name": "string",
-      "role": "string",
-      "@baseType": "string",
-      "@schemaLocation": "string",
-      "@type": "string",
-      "@referredType": "string"
-    },
-    {
-      "id": "21",
-      "href": "hello",
       "name": "string",
       "role": "string",
       "@baseType": "string",
@@ -61,7 +42,7 @@
   ],
   "note": [
     {
-      "id": "23",
+      "id": "24",
       "author": "string",
       "date": "2022-06-29T10:33:12.499Z",
       "text": "rdyhhy",
@@ -72,7 +53,7 @@
   ],
   "payment": [
     {
-      "id": "544",
+      "id": "545",
       "href": "string",
       "name": "string",
       "@baseType": "string",
@@ -83,7 +64,7 @@
   ],
   "productOfferingQualification": [
     {
-      "id": "243",
+      "id": "244",
       "href": "string",
       "name": "string",
       "@baseType": "string",
@@ -94,7 +75,7 @@
   ],
   "quote": [
     {
-      "id": "433",
+      "id": "434",
       "href": "string",
       "name": "string",
       "@baseType": "string",
@@ -188,7 +169,7 @@
   ],
   "relatedParty": [
     {
-      "id": "34",
+      "id": "50",
       "href": "string",
       "name": "string",
       "role": "string",
@@ -277,7 +258,7 @@
                 "@type": "string"
               },
               "productOfferingPrice": {
-                "id": "123",
+                "id":"3",
                 "href": "string",
                 "name": "string",
                 "@baseType": "string",
@@ -325,7 +306,7 @@
           "recurringChargePeriod": "string",
           "unitOfMeasure": "string",
           "billingAccount": {
-            "id": "9",
+            "id":"1",
             "href": "string",
             "name": "string",
             "@baseType": "string",
@@ -424,7 +405,7 @@
         "terminationDate": "2022-06-29T10:33:12.500Z",
         "agreement": [
           {
-            "id": "87",
+            "id": "88",
             "href": "string",
             "agreementItemId": "string",
             "name": "string",
@@ -448,6 +429,60 @@
             "id": "44",
             "href": "string",
             "name": "string",
+            "geographicAddressValidation":{
+              "provideAlternative": true,
+              "submittedGeographicAddress": {
+                "id": "1",
+                "href": "string",
+                "city": "London",
+                "country": "United Kingdom",
+                "locality": "string",
+                "name": "string",
+                "postcode": "string",
+                "stateOrProvince": "string",
+                "streetName": "Test Road",
+                "streetNr": "string",
+                "streetNrLast": "string",
+                "streetNrLastSuffix": "string",
+                "streetNrSuffix": "string",
+                "streetSuffix": "string",
+                "streetType": "string",
+                "geographicLocation": {
+                  "id": "1",
+                  "href": "string",
+                  "name": "Test Location",
+                  "@baseType": "ResourceSpecification",
+                  "bbox": "string",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "GeoJsonPoint",
+                  "@referredType": "string"
+                },
+                "geographicSubAddress": [
+                  {
+                    "id": "1",
+                    "href": "string",
+                    "buildingName": "Big Building",
+                    "levelNumber": "string",
+                    "levelType": "string",
+                    "name": "string",
+                    "privateStreetName": "string",
+                    "privateStreetNumber": "string",
+                    "subAddressType": "string",
+                    "subUnitNumber": "string",
+                    "subUnitType": "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              },
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
             "role": "string",
             "@baseType": "string",
             "@schemaLocation": "string",
@@ -491,7 +526,7 @@
           {
             "description": "string",
             "name": "string",
-            "priceType": "string",
+            "priceType":"string",
             "recurringChargePeriod": "string",
             "unitOfMeasure": "string",
             "billingAccount": {
@@ -636,7 +671,7 @@
         ],
         "relatedParty": [
           {
-            "id": "67",
+            "id":"2",
             "href": "string",
             "name": "string",
             "role": "string",

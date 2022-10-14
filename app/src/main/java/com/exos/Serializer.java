@@ -15,7 +15,12 @@ public class Serializer {
 
     public static Object serialize(HttpResponse<JsonNode> response, Class responseObjectType) {
 
-        return new Gson().fromJson(response.getBody().toString(), responseObjectType);
+        return serialize(response.getBody().toString(), responseObjectType);
+    }
+
+    public static Object serialize(String json, Class responseObjectType) {
+
+        return new Gson().fromJson(json, responseObjectType);
     }
 
     public static Object convertJsonStringToObject(String filename, Class objectType) {

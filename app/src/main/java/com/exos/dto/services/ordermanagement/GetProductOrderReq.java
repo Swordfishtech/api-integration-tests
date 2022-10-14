@@ -20,6 +20,6 @@ public class GetProductOrderReq extends AbstractHttpSpecification {
 
     @Override
     protected String getEndpointUrl() {
-        return Properties.ORDER_MANAGEMENT_SERVER_HOSTNAME + "/api/product-order/" + productOrderId;
+        return Properties.ORDER_MANAGEMENT_SERVICE_SERVER_HOSTNAME + "/api/product-order/" + productOrderId;
     }
 }

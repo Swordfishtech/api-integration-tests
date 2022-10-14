@@ -5,9 +5,9 @@ import com.exos.GatewayRequest;
 import com.exos.Serializer;
 import com.exos.dto.services.ErrorMessage;
 import com.exos.dto.services.Attributes;
-import com.exos.dto.services.productsController.GetGroupProductsReq;
-import com.exos.dto.services.productsController.GetGroupProductsResp;
-import com.exos.dto.services.sessionController.SessionReq;
+import com.exos.dto.services.translation.products.GetGroupProductsReq;
+import com.exos.dto.services.translation.products.GetGroupProductsResp;
+import com.exos.dto.services.session.SessionReq;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;

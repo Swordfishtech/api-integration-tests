@@ -1,17 +1,17 @@
 package com.exos.services.cartmanagement;
 
-import static com.exos.helpers.AssertHelper.assertResponseBodyContains;
+import static com.exos.helpers.AssertHelper.*;
 import static org.hamcrest.Matchers.*;
 
 import com.exos.*;
+import com.exos.dto.services.generic.ErrorMessage;
 import com.exos.helpers.MandatoryHeaders;
-import com.exos.dto.services.cart.*;
+import com.exos.dto.services.cartmanagement.*;
 import org.testng.annotations.Test;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import static com.exos.helpers.AssertHelper.assertResponseCode;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class TestDeleteCart extends BaseTest {
@@ -129,17 +129,37 @@ public class TestDeleteCart extends BaseTest {
         HttpHeader headers = MandatoryHeaders.getHeaders();
         headers.addHeader("email", "");
 
-        GatewayRequest getCart = new GatewayRequest()
-                .usingHeaders(headers)
+        String cartId = createShoppingCart();
+
+        GatewayRequest gatewayRequest = new GatewayRequest()
                 .forService()
                 .cartManagement()
-                .getCart(GetShoppingCart.builder()
-                        .cartId("1")
-                        .build())
+                .deleteCart(DeleteShoppingCart.builder()
+                        .build()
+                        .setCartId(cartId))
                 .send();
 
-        assertResponseCode(getCart, 400);
+        assertResponseCode(gatewayRequest, 400);
+    }
 
+    @Test
+    public void test_missing_full_name_header() {
+
+        HttpHeader headers = MandatoryHeaders.getHeaders();
+        headers.removeHeader("full-name");
+
+        String cartId = createShoppingCart();
+
+        GatewayRequest gatewayRequest = new GatewayRequest()
+                .forService()
+                .cartManagement()
+                .deleteCart(DeleteShoppingCart.builder()
+                        .build()
+                        .setCartId(cartId))
+                .send();
+
+        assertResponseCode(gatewayRequest, 400);
+        assertMissingMandatoryHeadersErrorMessage(gatewayRequest.getHttpResponse());
     }
 
 

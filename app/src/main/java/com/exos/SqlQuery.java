@@ -3,6 +3,7 @@ package com.exos;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+import org.postgresql.util.PSQLException;
 
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
@@ -25,6 +26,8 @@ public class SqlQuery {
         try {
             stmt = DatabaseConnector.getConnection().createStatement();
             rs = stmt.executeQuery(sql);
+        } catch (PSQLException pe) {
+            // do nothing
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -90,7 +93,8 @@ public class SqlQuery {
                 "TRUNCATE productspecification RESTART IDENTITY CASCADE;\n" +
                 "TRUNCATE appointment RESTART IDENTITY CASCADE;\n" +
                 "TRUNCATE productofferingqualificationitem RESTART IDENTITY CASCADE;\n" +
-                "TRUNCATE quoteitem RESTART IDENTITY CASCADE;");
+                "TRUNCATE quoteitem RESTART IDENTITY CASCADE;\n" +
+                "TRUNCATE geographiclocation RESTART IDENTITY CASCADE;");
     }
 
 

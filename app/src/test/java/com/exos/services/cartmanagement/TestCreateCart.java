@@ -2,14 +2,13 @@ package com.exos.services.cartmanagement;
 
 import com.exos.*;
 import com.exos.helpers.MandatoryHeaders;
-import com.exos.dto.services.cart.CreateShoppingCart;
+import com.exos.dto.services.cartmanagement.CreateShoppingCart;
 import com.exos.dto.services.generic.ErrorMessage;
 import org.testng.SkipException;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static com.exos.helpers.AssertHelper.assertResponseBodyContains;
-import static com.exos.helpers.AssertHelper.assertResponseCode;
+import static com.exos.helpers.AssertHelper.*;
 
 public class TestCreateCart extends BaseTest {
 
@@ -19,6 +18,7 @@ public class TestCreateCart extends BaseTest {
     public void test_create_cart_as_guest_user() {
 
         GatewayRequest gatewayRequest = new GatewayRequest()
+                .usingHeaders(MandatoryHeaders.getHeaders())
                 .forService()
                 .cartManagement()
                 .createCart(createShoppingCart)
@@ -45,13 +45,7 @@ public class TestCreateCart extends BaseTest {
                 .send();
 
         assertResponseCode(gatewayRequest, 400);
-        ErrorMessage errorMsg = (ErrorMessage) Serializer.serialize(gatewayRequest.getHttpResponse(), ErrorMessage.class);
-        assertResponseBodyContains("Code", errorMsg.getCode(), "400");
-        assertResponseBodyContains("Status", errorMsg.getStatus(), "400");
-        assertResponseBodyContains("Reason", errorMsg.getReason(), "Error while creating Shopping Cart");
-        assertResponseBodyContains("Message", errorMsg.getMessage(), "Please provide valid input json body with required parameters");
-        assertResponseBodyContains("Reference Error", errorMsg.getReferenceError(), "Please provide valid input json body with required parameters");
-
+        assertMissingMandatoryHeadersErrorMessage(gatewayRequest.getHttpResponse());
     }
 
     @Test(groups = "SURE-273")
@@ -68,13 +62,7 @@ public class TestCreateCart extends BaseTest {
                 .send();
 
         assertResponseCode(gatewayRequest, 400);
-
-        ErrorMessage errorMsg = (ErrorMessage) Serializer.serialize(gatewayRequest.getHttpResponse(), ErrorMessage.class);
-        assertResponseBodyContains("Code", errorMsg.getCode(), "400");
-        assertResponseBodyContains("Status", errorMsg.getStatus(), "400");
-        assertResponseBodyContains("Reason", errorMsg.getReason(), "Required headers are missing, please verify and try again");
-        assertResponseBodyContains("Message", errorMsg.getMessage(), "Please provide all the necessary and required http headers");
-        assertResponseBodyContains("Reference Error", errorMsg.getReferenceError(), "Please provide all the necessary and required http headers");
+        assertMissingMandatoryHeadersErrorMessage(gatewayRequest.getHttpResponse());
     }
 
     @Test(groups = "SURE-273")
@@ -91,13 +79,41 @@ public class TestCreateCart extends BaseTest {
                 .send();
 
         assertResponseCode(gatewayRequest, 400);
+        assertMissingMandatoryHeadersErrorMessage(gatewayRequest.getHttpResponse());
+    }
 
-        ErrorMessage errorMsg = (ErrorMessage) Serializer.serialize(gatewayRequest.getHttpResponse(), ErrorMessage.class);
-        assertResponseBodyContains("Code", errorMsg.getCode(), "400");
-        assertResponseBodyContains("Status", errorMsg.getStatus(), "400");
-        assertResponseBodyContains("Reason", errorMsg.getReason(), "Required headers are missing, please verify and try again");
-        assertResponseBodyContains("Message", errorMsg.getMessage(), "Please provide all the necessary and required http headers");
-        assertResponseBodyContains("Reference Error", errorMsg.getReferenceError(), "Please provide all the necessary and required http headers");
+    @Test
+    public void test_missing_correlation_id_header() {
+
+        HttpHeader headers = MandatoryHeaders.getHeaders();
+        headers.removeHeader("correlation-id");
+
+        GatewayRequest gatewayRequest = new GatewayRequest()
+                .usingHeaders(headers)
+                .forService()
+                .cartManagement()
+                .createCart(createShoppingCart)
+                .send();
+
+        assertResponseCode(gatewayRequest, 400);
+        assertMissingMandatoryHeadersErrorMessage(gatewayRequest.getHttpResponse());
+    }
+
+    @Test
+    public void test_missing_x_correlation_id_header() {
+
+        HttpHeader headers = MandatoryHeaders.getHeaders();
+        headers.removeHeader("x-correlation-id");
+
+        GatewayRequest gatewayRequest = new GatewayRequest()
+                .usingHeaders(headers)
+                .forService()
+                .cartManagement()
+                .createCart(createShoppingCart)
+                .send();
+
+        assertResponseCode(gatewayRequest, 400);
+        assertMissingMandatoryHeadersErrorMessage(gatewayRequest.getHttpResponse());
     }
 
     @BeforeClass
