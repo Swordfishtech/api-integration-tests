@@ -5,6 +5,7 @@ import com.exos.Properties;
 import com.exos.dto.services.Session;
 import com.mashape.unirest.http.HttpMethod;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
@@ -14,7 +15,8 @@ import lombok.experimental.Accessors;
 public class GetDetailForProductReq extends AbstractHttpSpecification {
 
     private String handle;
-    @Getter private Session session;
+    @Getter
+    private Session session;
     private String tariffCode;
 
     @Override
