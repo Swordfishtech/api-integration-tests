@@ -3,13 +3,10 @@ package com.exos.helpers;
 import com.aventstack.extentreports.Status;
 import com.exos.BaseTest;
 import com.exos.GatewayRequest;
-<<<<<<< HEAD
-=======
 import com.exos.Serializer;
 import com.exos.dto.services.generic.ErrorMessage;
 import com.exos.dto.services.session.SessionReq;
 import com.mashape.unirest.http.HttpResponse;
->>>>>>> 5ad3d1b (created dockerfile)
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -38,8 +35,6 @@ public class AssertHelper {
         BaseTest.getTestReporter().log(Status.PASS, String.format("Validated field [%s] is [%b]", fieldName, expectedValue));
     }
 
-<<<<<<< HEAD
-=======
     public static void assertResponseBodyValueIsNotNull(String fieldName, int value) {
         assertThat("Unexpected value in field " + fieldName,value,is(notNullValue()));
         BaseTest.getTestReporter().log(Status.PASS, String.format("Validated field [%s] is not null", fieldName));
@@ -67,5 +62,4 @@ public class AssertHelper {
         assertResponseBodyContains("trackingId", actualLog, expectedLog);
     }
 
->>>>>>> 5ad3d1b (created dockerfile)
 }
