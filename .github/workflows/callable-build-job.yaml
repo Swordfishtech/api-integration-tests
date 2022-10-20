@@ -8,8 +8,6 @@ on:
         type: string
 
     secrets:
-      AZURE_CREDENTIALS:
-        required: true
       GHCR_LOGIN_PWD:
         required: true
       GHCR_READ_IMG_TOKEN:
