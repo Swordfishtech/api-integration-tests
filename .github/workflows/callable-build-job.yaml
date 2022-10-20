@@ -42,4 +42,24 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository }}:${{ github.sha }} , ghcr.io/${{ github.repository }}:latest
+          tags: ghcr.io/${{ github.repository }}:${{ github.sha }}
+      
+            # Login to Azure
+      - name: Azure login
+        uses: azure/login@v1.4.3
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # Retrieves your Azure Kubernetes Service cluster's kubeconfig file
+      - name: Get K8s context
+        uses: azure/aks-set-context@v2.0
+        with:
+          resource-group: ${{ env.ClUSTER_RESOURCE_GROUP }}
+          cluster-name: ${{ env.CLUSTER_NAME }}
+
+      - name: Install Helm
+        uses: azure/setup-helm@v3
+
+      - name: Deploy To Kubernetes
+        run: |
+          helm upgrade --install ${{env.CONTAINER_NAME}} ${{env.HELM_TEMPLATE}} --set image.repository=ghcr.io/${{ github.repository }} --namespace=${{env.NAMESPACE}} --set image.tag=${{ github.sha }}

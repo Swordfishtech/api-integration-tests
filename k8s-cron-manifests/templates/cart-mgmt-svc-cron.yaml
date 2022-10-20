@@ -1,0 +1,28 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: cart-mgmt-svc-test
+spec:
+  jobTemplate:
+    metadata:
+      name: cart-mgmt-svc-test
+      annotations:
+        sidecar.istio.io/inject: "false"
+    spec:
+      template:
+        metadata:
+        spec:
+          containers:
+          - image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+            imagePullPolicy: Always
+            name: cart-mgmt-svc-test
+            command:
+              - "/bin/sh"
+              - "-c"
+              - "java -jar api-integration-tests.jar cartmanagement.xml"
+            resources: {}
+          restartPolicy: Never
+          imagePullSecrets:
+          - name: pull-image-secret
+  schedule: 0 0 1 1 *
+status: {}
