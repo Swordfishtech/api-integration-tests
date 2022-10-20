@@ -10,4 +10,4 @@ COPY --from=builder /app/target/api-integration-tests-1.0-SNAPSHOT-fat-tests.jar
 COPY --from=builder /app/suites /app/suites
 ENV TEST_SUITE=testng.xml
 
-CMD java -jar api-integration-tests.jar ${TEST_SUITE}
+# CMD java -jar api-integration-tests.jar ${TEST_SUITE}
