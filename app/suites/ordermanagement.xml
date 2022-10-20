@@ -2,7 +2,7 @@
 <suite name="Order Management Service">
 <test name="Order Management Service"   >
         <packages>
-            <package name="com.exos.dto.services.ordermanagement" />
+            <package name="com.exos.services.ordermanagement" />
         </packages>
     </test>
     <groups>
