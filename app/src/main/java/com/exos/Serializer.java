@@ -5,6 +5,7 @@ import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import org.apache.commons.io.IOUtils;
 import org.json.JSONObject;
+import org.testng.Assert;
 
 import java.io.*;
 
@@ -32,25 +33,22 @@ public class Serializer {
 
     private static JSONObject readJson(String filename) {
 
-        JSONObject json = null;
+        JSONObject json;
 
-        File f = new File("src/main/resources/" + filename);
-        if (f.exists()) {
-            InputStream is = null;
-            try {
-                is = new FileInputStream("src/main/resources/" + filename);
-            } catch (FileNotFoundException e) {
-                fail(e.getMessage());
-            }
+        String file = "/templates/" + filename;
+        InputStream is = Serializer.class.getResourceAsStream(file);
 
-            String jsonTxt = null;
-            try {
-                jsonTxt = IOUtils.toString(is, "UTF-8");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            json = new JSONObject(jsonTxt);
+        if (is == null) {
+            Assert.fail("Failed to find the file " + file);
         }
+
+        String jsonTxt = null;
+        try {
+            jsonTxt = IOUtils.toString(is, "UTF-8");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        json = new JSONObject(jsonTxt);
 
         return json;
     }

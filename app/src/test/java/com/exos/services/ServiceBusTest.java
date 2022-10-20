@@ -106,7 +106,7 @@ public class ServiceBusTest extends BaseTest {
     private void createProductOrder() {
 
         // build product order request
-        createProductOrderReq = (CreateProductOrderReq) Serializer.convertJsonStringToObject("ProductOrder.json", CreateProductOrderReq.class);
+        createProductOrderReq = (CreateProductOrderReq) Serializer.convertJsonStringToObject("templates/ProductOrder.json", CreateProductOrderReq.class);
 
         HttpHeader headers = MandatoryHeaders.getHeaders();
         correlationId = headers.getHeaders().get("correlation-id");

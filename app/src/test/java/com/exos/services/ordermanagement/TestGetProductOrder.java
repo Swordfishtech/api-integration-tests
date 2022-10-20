@@ -5,9 +5,7 @@ import com.exos.dto.services.ordermanagement.CreateProductOrderReq;
 import com.exos.dto.services.ordermanagement.GetProductOrderReq;
 import com.exos.dto.services.ordermanagement.GetProductOrderResp;
 import com.exos.helpers.MandatoryHeaders;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import static com.exos.helpers.AssertHelper.assertResponseBodyContains;
@@ -20,7 +18,7 @@ public class TestGetProductOrder extends BaseTest {
     public void test_get_product_order() {
 
         // create an order in the db
-        CreateProductOrderReq createOrder = (CreateProductOrderReq) Serializer.convertJsonStringToObject("ProductOrder.json", CreateProductOrderReq.class);
+        CreateProductOrderReq createOrder = (CreateProductOrderReq) Serializer.convertJsonStringToObject("templates/ProductOrder.json", CreateProductOrderReq.class);
 
         new GatewayRequest()
                 .usingHeaders(MandatoryHeaders.getHeaders())
@@ -49,7 +47,7 @@ public class TestGetProductOrder extends BaseTest {
     public void test_get_product_order_returns_geographic_address_block() {
 
         // create an order in the db
-        CreateProductOrderReq createOrder = (CreateProductOrderReq) Serializer.convertJsonStringToObject("ProductOrder.json", CreateProductOrderReq.class);
+        CreateProductOrderReq createOrder = (CreateProductOrderReq) Serializer.convertJsonStringToObject("templates/ProductOrder.json", CreateProductOrderReq.class);
 
         new GatewayRequest()
                 .usingHeaders(MandatoryHeaders.getHeaders())

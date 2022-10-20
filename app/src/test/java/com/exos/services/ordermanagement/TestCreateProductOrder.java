@@ -14,7 +14,7 @@ public class TestCreateProductOrder extends BaseTest {
 
     @BeforeMethod(alwaysRun = true)
     public void setupRequest() {
-        request = (CreateProductOrderReq) Serializer.convertJsonStringToObject("ProductOrder.json", CreateProductOrderReq.class);
+        request = (CreateProductOrderReq) Serializer.convertJsonStringToObject("templates/ProductOrder.json", CreateProductOrderReq.class);
     }
 
     @Test(groups = "SURE-148")
