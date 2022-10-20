@@ -1,9 +1,10 @@
 package com.exos.services.cartmanagement;
 
 import com.exos.*;
+import com.exos.dto.services.generic.ErrorMessage;
 import com.exos.helpers.MandatoryHeaders;
 import com.exos.dto.services.cartmanagement.CreateShoppingCart;
-import com.exos.dto.services.generic.ErrorMessage;
+import org.json.JSONObject;
 import org.testng.SkipException;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -39,13 +40,19 @@ public class TestCreateCart extends BaseTest {
     public void test_missing_request_body() {
 
         GatewayRequest gatewayRequest = new GatewayRequest()
+                .usingHeaders(MandatoryHeaders.getHeaders())
                 .forService()
                 .cartManagement()
                 .createCart(CreateShoppingCart.builder().build())
                 .send();
 
         assertResponseCode(gatewayRequest, 400);
-        assertMissingMandatoryHeadersErrorMessage(gatewayRequest.getHttpResponse());
+        ErrorMessage error = (ErrorMessage) Serializer.serialize(gatewayRequest.getHttpResponse(), ErrorMessage.class);
+        assertResponseBodyContains("reason", error.getReason(), "Error while creating Shopping Cart");
+        assertResponseBodyContains("code", String.valueOf(error.getCode()), "400"); //todo sometimes it's a int sometimes it's a String!!!
+        assertResponseBodyContains("message", error.getMessage(), "Please provide valid input json body with required parameters");
+        assertResponseBodyContains("referenceError", error.getReferenceError(), "Please provide valid input json body with required parameters");
+        assertResponseBodyContains("status", error.getStatus(), 400);
     }
 
     @Test(groups = "SURE-273")

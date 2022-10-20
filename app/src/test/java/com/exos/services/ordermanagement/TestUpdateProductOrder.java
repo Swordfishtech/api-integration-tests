@@ -128,7 +128,7 @@ public class TestUpdateProductOrder extends BaseTest {
         SqlQuery.clearDownOrderManagementServiceDatabases();
 
         // Create a new order in the database
-        CreateProductOrderReq createOrder = (CreateProductOrderReq) Serializer.convertJsonStringToObject("ProductOrder.json", CreateProductOrderReq.class);
+        CreateProductOrderReq createOrder = (CreateProductOrderReq) Serializer.convertJsonStringToObject("templates/ProductOrder.json", CreateProductOrderReq.class);
         new GatewayRequest()
                 .forService()
                 .orderManagement()

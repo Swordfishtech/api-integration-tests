@@ -17,7 +17,7 @@ public class TestGetBasket extends BaseTest {
     @Test
     public void test_add_basket() {
 
-        AddBasketReq addBasket = (AddBasketReq) Serializer.convertJsonStringToObject("Basket.json", AddBasketReq.class);
+        AddBasketReq addBasket = (AddBasketReq) Serializer.convertJsonStringToObject("templates/Basket.json", AddBasketReq.class);
 
         GatewayRequest gatewayRequest = new GatewayRequest()
                 .forService()
@@ -46,7 +46,7 @@ public class TestGetBasket extends BaseTest {
     @Test
     public void test_modify_basket() {
 
-        AddBasketReq addBasket = (AddBasketReq) Serializer.convertJsonStringToObject("Basket.json", AddBasketReq.class);
+        AddBasketReq addBasket = (AddBasketReq) Serializer.convertJsonStringToObject("templates/Basket.json", AddBasketReq.class);
 
         ModifyBasketReq modifyBasketReq = ModifyBasketReq.builder().requestBody(addBasket.getRequestBody()).build();
 

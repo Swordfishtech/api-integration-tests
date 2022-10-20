@@ -4,7 +4,6 @@ import static com.exos.helpers.AssertHelper.*;
 import static org.hamcrest.Matchers.*;
 
 import com.exos.*;
-import com.exos.dto.services.generic.ErrorMessage;
 import com.exos.helpers.MandatoryHeaders;
 import com.exos.dto.services.cartmanagement.*;
 import org.testng.annotations.Test;
@@ -25,6 +24,7 @@ public class TestDeleteCart extends BaseTest {
 
         // delete the cart
         GatewayRequest gatewayRequest = new GatewayRequest()
+                .usingHeaders(MandatoryHeaders.getHeaders())
                 .forService()
                 .cartManagement()
                 .deleteCart(DeleteShoppingCart.builder()
@@ -36,6 +36,7 @@ public class TestDeleteCart extends BaseTest {
 
         // attempt to retrieve the cart
         GatewayRequest getCart = new GatewayRequest()
+                .usingHeaders(MandatoryHeaders.getHeaders())
                 .forService()
                 .cartManagement()
                 .getCart(GetShoppingCart.builder()
@@ -50,6 +51,7 @@ public class TestDeleteCart extends BaseTest {
     public void test_using_a_cart_id_that_does_not_exist() {
 
         GatewayRequest gatewayRequest = new GatewayRequest()
+                .usingHeaders(MandatoryHeaders.getHeaders())
                 .forService()
                 .cartManagement()
                 .deleteCart(DeleteShoppingCart.builder()
@@ -68,7 +70,7 @@ public class TestDeleteCart extends BaseTest {
 
     }
 
-    @Test(groups = "SURE-283")
+    @Test(groups = "SURE-283-BUG")
     public void test_soft_delete() {
 
         // create a cart
@@ -89,6 +91,7 @@ public class TestDeleteCart extends BaseTest {
 
         // delete a cart
         GatewayRequest delete = new GatewayRequest()
+                .usingHeaders(MandatoryHeaders.getHeaders())
                 .forService()
                 .cartManagement()
                 .deleteCart(DeleteShoppingCart.builder()
@@ -112,6 +115,7 @@ public class TestDeleteCart extends BaseTest {
 
         // check you can't retrieve the cart anymore
         GatewayRequest getCart = new GatewayRequest()
+                .usingHeaders(MandatoryHeaders.getHeaders())
                 .forService()
                 .cartManagement()
                 .getCart(GetShoppingCart.builder()
@@ -123,7 +127,7 @@ public class TestDeleteCart extends BaseTest {
 
     }
 
-    @Test(groups = {"SURE-262","SURE-273-BUG"}, description = "Validation failing on this header")
+    @Test(groups = {"SURE-262"})
     public void test_empty_email_request_header_value() {
 
         HttpHeader headers = MandatoryHeaders.getHeaders();
@@ -132,6 +136,7 @@ public class TestDeleteCart extends BaseTest {
         String cartId = createShoppingCart();
 
         GatewayRequest gatewayRequest = new GatewayRequest()
+                .usingHeaders(headers)
                 .forService()
                 .cartManagement()
                 .deleteCart(DeleteShoppingCart.builder()
@@ -151,6 +156,7 @@ public class TestDeleteCart extends BaseTest {
         String cartId = createShoppingCart();
 
         GatewayRequest gatewayRequest = new GatewayRequest()
+                .usingHeaders(headers)
                 .forService()
                 .cartManagement()
                 .deleteCart(DeleteShoppingCart.builder()
@@ -167,6 +173,7 @@ public class TestDeleteCart extends BaseTest {
         CreateShoppingCart request = (CreateShoppingCart) Serializer.convertJsonStringToObject("CreateCart.json", CreateShoppingCart.class);
 
         GatewayRequest create = new GatewayRequest()
+                .usingHeaders(MandatoryHeaders.getHeaders())
                 .forService()
                 .cartManagement()
                 .createCart(request)

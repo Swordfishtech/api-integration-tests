@@ -46,10 +46,10 @@ public class TestGetCart extends BaseTest {
         GetShoppingCartErrorResp error = (GetShoppingCartErrorResp) Serializer.serialize(gatewayRequest.getHttpResponse(), GetShoppingCartErrorResp.class);
         assertResponseBodyContains("Code", error.getCode(), 404);
         assertResponseBodyContains("Status Code", error.getStatusCode(), 404);
-        assertResponseBodyContains("Reference Error", error.getReferenceError(), "Detail Not Found");
-        assertResponseBodyContains("Detail", error.getDetail(), "Not found");
-        assertResponseBodyContains("Reason", error.getReason(), "No ShoppingCart matches the given query");
-        assertResponseBodyContains("Message", error.getMessage(), "No ShoppingCart matches the given query");
+        assertResponseBodyContains("Reference Error", error.getReferenceError(), "Detail not found");
+        assertResponseBodyContains("Detail", error.getDetail(), "Not Found");
+        assertResponseBodyContains("Reason", error.getReason(), "No shopping cart matches the given query");
+        assertResponseBodyContains("Message", error.getMessage(), "No shopping cart matches the given query");
     }
 
     @Test(groups = {"SURE-262", "SURE-312-BUG"})
@@ -61,14 +61,16 @@ public class TestGetCart extends BaseTest {
                 .getCart(GetShoppingCart.builder().cartId("null").build())
                 .send();
 
-        assertResponseCode(gatewayRequest, 404);
+        assertResponseCode(gatewayRequest, 400);
+
         GetShoppingCartErrorResp error = (GetShoppingCartErrorResp) Serializer.serialize(gatewayRequest.getHttpResponse(), GetShoppingCartErrorResp.class);
-        assertResponseBodyContains("Detail", error.getDetail(), "Not found");
-        assertResponseBodyContains("Code", error.getCode(), 404);
-        assertResponseBodyContains("Status Code", error.getStatusCode(), 404);
-        assertResponseBodyContains("Reference Error", error.getReferenceError(), "Detail Not Found");
-        assertResponseBodyContains("Reason", error.getReason(), "Please provide valid ID");
-        assertResponseBodyContains("Message", error.getMessage(), "Please provide valid ID");
+//        assertResponseBodyContains("Detail", error.getDetail(), "Not found"); //todo this is in deleteCart but not in CreateCart
+        assertResponseBodyContains("Code", String.valueOf(error.getCode()), "400"); //todo sometimes string sometimes int
+        assertResponseBodyContains("Status Code", String.valueOf(error.getStatusCode()), "400"); //todo sometimes string sometimes int
+        assertResponseBodyContains("Reference Error", error.getReferenceError(), "Please provide valid shopping cart id");
+        assertResponseBodyContains("Reason", error.getReason(), "Error while retrieving Cart");
+        assertResponseBodyContains("Message", error.getMessage(), "Please provide valid shopping cart id");
+
     }
 
     @Test(groups = {"SURE-262"})
@@ -81,7 +83,14 @@ public class TestGetCart extends BaseTest {
                 .send();
 
         assertResponseCode(gatewayRequest, 400);
-        assertMissingMandatoryHeadersErrorMessage(gatewayRequest.getHttpResponse());
+
+        ErrorMessage error = (ErrorMessage) Serializer.serialize(gatewayRequest.getHttpResponse(), ErrorMessage.class);
+        assertResponseBodyContains("reason", error.getReason(), "Error while retrieving Cart");
+        assertResponseBodyContains("code", String.valueOf(error.getCode()), "400"); //todo sometimes it's a int sometimes it's a String!!!
+        assertResponseBodyContains("message", error.getMessage(), "Please provide valid shopping cart id");
+        assertResponseBodyContains("referenceError", error.getReferenceError(), "Please provide valid shopping cart id");
+//        assertResponseBodyContains("status", error.getStatus(), 400); //todo not returned for this
+
     }
 
     @Test(groups = {"SURE-262","SURE-311-BUG"})
@@ -94,7 +103,14 @@ public class TestGetCart extends BaseTest {
                 .send();
 
         assertResponseCode(gatewayRequest, 400);
-        assertMissingMandatoryHeadersErrorMessage(gatewayRequest.getHttpResponse());
+
+        GetShoppingCartErrorResp error = (GetShoppingCartErrorResp) Serializer.serialize(gatewayRequest.getHttpResponse(), GetShoppingCartErrorResp.class);
+//        assertResponseBodyContains("Detail", error.getDetail(), "Not found"); //todo this is in deleteCart but not in CreateCart
+        assertResponseBodyContains("Code", String.valueOf(error.getCode()), "400"); //todo sometimes string sometimes int
+        assertResponseBodyContains("Status Code", String.valueOf(error.getStatusCode()), "400"); //todo sometimes string sometimes int
+        assertResponseBodyContains("Reference Error", error.getReferenceError(), "Please provide valid shopping cart id");
+        assertResponseBodyContains("Reason", error.getReason(), "Error while retrieving Cart");
+        assertResponseBodyContains("Message", error.getMessage(), "Please provide valid shopping cart id");
 
     }
 
@@ -134,7 +150,7 @@ public class TestGetCart extends BaseTest {
         assertMissingMandatoryHeadersErrorMessage(gatewayRequest.getHttpResponse());
     }
 
-    @Test
+    @Test(groups = "SURE-273-BUG")
     public void test_missing_login_name_header() {
 
         HttpHeader headers = MandatoryHeaders.getHeaders();
@@ -152,7 +168,7 @@ public class TestGetCart extends BaseTest {
         assertMissingMandatoryHeadersErrorMessage(gatewayRequest.getHttpResponse());
     }
 
-    @Test
+    @Test(groups = "SURE-273-BUG")
     public void test_missing_email_header() {
 
         HttpHeader headers = MandatoryHeaders.getHeaders();
